@@ -1,3 +1,3 @@
-OSF Console component
+# OSF Console component
 
 Under development

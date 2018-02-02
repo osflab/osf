@@ -2,7 +2,7 @@
     "name": "osflab/console",
     "type": "library",
     "homepage": "https://github.com/osflab/console",
-    "licence": "AGPL-3.0-or-later",
+    "license": "AGPL-3.0-or-later",
     "authors": [
         {
             "name": "Guillaume Ponçon",
@@ -16,6 +16,7 @@
     "require": {
         "php": "^7.1.0"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Osf\\Console\\": ""
