@@ -20,11 +20,11 @@ namespace Osf\Console;
  */
 class Base
 {
-    protected const COLOR_BEGIN_RED    = '[1;31m';
-    protected const COLOR_BEGIN_GREEN  = '[1;32m';
-    protected const COLOR_BEGIN_YELLOW = '[1;33m';
-    protected const COLOR_BEGIN_BLUE   = '[1;34m';
-    protected const COLOR_END          = '[0;0m';
+    const COLOR_BEGIN_RED    = '[1;31m';
+    const COLOR_BEGIN_GREEN  = '[1;32m';
+    const COLOR_BEGIN_YELLOW = '[1;33m';
+    const COLOR_BEGIN_BLUE   = '[1;34m';
+    const COLOR_END          = '[0;0m';
 
     /**
      * New action message, need to be ended by a "endActionXxx" method
