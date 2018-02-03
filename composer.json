@@ -1,5 +1,6 @@
 {
     "name": "osflab/console",
+    "description": "OSF simple unit test component",
     "type": "library",
     "homepage": "https://github.com/osflab/console",
     "license": "AGPL-3.0-or-later",
@@ -15,6 +16,9 @@
     },
     "require": {
         "php": "^7.1.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
     },
     "minimum-stability": "dev",
     "autoload": {
