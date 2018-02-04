@@ -10,6 +10,8 @@ namespace Osf\Exception;
 
 /**
  * Architectural exception, usefull for developers
+ * 
+ * Use ArchException for technical malfunctions
  *
  * @author Guillaume Ponçon <guillaume.poncon@openstates.com>
  * @copyright OpenStates

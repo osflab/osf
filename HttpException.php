@@ -25,7 +25,9 @@ class HttpException extends OsfException
     public function __construct($message = null, $code = null, $previous = null)
     {
         if (!in_array($code, $this->managedCodes)) {
-            throw new ArchException('HttpException launched without right http code. Choose one of theses : ' . implode(', ', $this->managedCodes));
+            $httpCodes = implode(', ', $this->managedCodes);
+            $msg = sprintf('HttpException launched without known http code. Choose one of theses: %s', $httpCodes);
+            throw new ArchException($msg);
         }
         parent::__construct($message, $code, $previous);
     }

@@ -34,7 +34,22 @@ class Test extends OsfTest
         self::assertEqual(get_class(PhpErrorException::getLastError()), 'Osf\Exception\PhpError\UserNoticeException');
         self::assertEqual(trigger_error('test', E_USER_ERROR), true);
         self::assertEqual(get_class(PhpErrorException::getLastError()), 'Osf\Exception\PhpError\UserErrorException');
-                 
+
+        try {
+            throw new HttpException('Unknown', 999);
+        } catch (ArchException $e) {
+            self::assert(strpos($e->getMessage(), 'HttpException launched without known http code. Choose one of theses: ') === 0);
+        } catch (\Exception $e) {
+            self::assert(false, 'Not expected: ' . $e->getMessage());
+        }
+
+        if (trait_exists('\Osf\View\Helper\Addon\Title')) {
+            $e = (new AlertException('Message', 56))->setTitle('Title');
+            self::assertEqual($e->getTitle(), 'Title');
+            self::assertEqual($e->getStatus(), 'warning');
+            self::assertEqual($e->getMessage(), 'Message');
+        }
+
         return self::getResult();
     }
 }

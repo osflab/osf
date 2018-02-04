@@ -15,7 +15,7 @@ use Osf\View\Helper\Bootstrap\Addon\StatusInterface;
 /**
  * This exception cancel the action and just generate an alert.
  * 
- * The user stay in the current page.
+ * To be used with Osf/Application
  *
  * @author Guillaume Ponçon <guillaume.poncon@openstates.com>
  * @copyright OpenStates
