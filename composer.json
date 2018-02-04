@@ -1,0 +1,35 @@
+{
+    "name": "osflab/helper",
+    "description": "OSF helper library",
+    "type": "library",
+    "homepage": "https://github.com/osflab/helper",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/helper/issues",
+        "source": "https://github.com/osflab/helper"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "osflab/stream": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Helper\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
