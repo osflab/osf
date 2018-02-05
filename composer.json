@@ -18,6 +18,9 @@
         "php": "^7.1.0",
         "zendframework/zend-filter": "~2.7.2"
     },
+    "suggest": {
+        "osflab/stream": "For phraseCleaner and UcPhrase"
+    },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {

@@ -43,6 +43,19 @@ class Test extends \Osf\Test\Runner
         self::assertEqual($tel->filter('+33123456789'), '+33123456789');
         self::assertEqual($tel->filter('+ 33  (1 ) 234  5 6 7 89'), '+33(1)23456789');
         
+        self::assertEqual((new CleanPhrase())->filter(' Welcome  on board ! '), 'Welcome on board !');
+        self::assertEqual((new Currency())->filter('12,3'), '12.3');
+        self::assertEqual((new Percentage())->filter(12.3), '12.3');
+        self::assertEqual((new Percentage())->filter('12.3'), '12.3');
+        self::assertEqual((new DateWire())->filter('2018-05-23'), '23/05/2018');
+        self::assertEqual((new RemoveSpaces())->filter(' welcome  on board !! '), 'welcomeonboard!!');
+        self::assertEqual((new UcPhrase())->filter(' jean - pierre   papin ! '), 'Jean-Pierre Papin !');
+        
+        if (class_exists('\Osf\Generator\AbstractBuilder')) {
+            self::assertEqual(Filter::getBaseName()->filter(__FILE__), 'Test.php');
+            self::assertEqual(Filter::getHtmlEntities()->filter('<b>hello</b>'), '&lt;b&gt;hello&lt;/b&gt;');
+        }
+        
         return self::getResult();
     }
 }

@@ -19,15 +19,17 @@ use Osf\Filter\AbstractFilter;
  * @since OSF-2.0 - 2017
  * @package osf
  * @subpackage filter
+ * @todo complete with some other date formats
  */
 class DateWire extends AbstractFilter
 {
+    protected const DW_PATTERN = '/^(2[0-9]{3})-([0-9]{2})-([0-9]{2})$/';
+    
     public function filter($value)
     {
         switch (true) {
-            case preg_match('/^2[0-9]{3}-[0-9]{2}-[0-9]{2}$/', $value) : 
-                $pattern = '/^(2[0-9]{3})-([0-9]{2})-([0-9]{2})$/';
-                return preg_replace($pattern, '$3/$2/$1', $value);
+            case preg_match(self::DW_PATTERN, $value) : 
+                return preg_replace(self::DW_PATTERN, '$3/$2/$1', $value);
             default : 
                 return $value;
         }
