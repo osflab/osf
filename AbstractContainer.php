@@ -28,9 +28,9 @@ abstract class AbstractContainer
      * Set the mock context in order to generate mock objects
      * Namespace "real" = no mock (production)
      * Namespace "mock" = mock (test)
-     * @param unknown $namespace
+     * @param string $namespace
      */
-    public static function setMockNamespace($namespace)
+    public static function setMockNamespace(string $namespace): void
     {
         static::$mockNamespace = $namespace;
     }
@@ -42,11 +42,12 @@ abstract class AbstractContainer
      * @param string $instanceName Name of the instance (x names = x instances)
      * @param string $beforeBuildBootstrapMethod method to call in bootstrap file before build the object
      * @param string $afterBuildBootstrapMethod method to call in bootstrap file after build the object
+     * @return mixed
      * @throws ArchException
      */
     public static function buildObject(
             $className, 
-            array $args = array(), 
+            array $args = [], 
             $instanceName = 'default', 
             $beforeBuildBootstrapMethod = null,
             $afterBuildBootstrapMethod = null
@@ -55,7 +56,7 @@ abstract class AbstractContainer
         if (!isset(static::$instances[static::$mockNamespace][$className][$instanceName])) {
             if ($beforeBuildBootstrapMethod !== null) {
                 $bootstrap = Container::getBootstrap();
-                if (!is_callable(array($bootstrap, $beforeBuildBootstrapMethod))) {
+                if (!is_callable([$bootstrap, $beforeBuildBootstrapMethod])) {
                     throw new ArchException("Bootstrap method $beforeBuildBootstrapMethod() must be declared in your bootstrap file");
                 }
                 $bootstrap->$beforeBuildBootstrapMethod();
@@ -85,6 +86,6 @@ abstract class AbstractContainer
      */
     public static function getInstances()
     {
-        return array_key_exists(static::$mockNamespace, static::$instances) ? static::$instances[static::$mockNamespace] : array();
+        return array_key_exists(static::$mockNamespace, static::$instances) ? static::$instances[static::$mockNamespace] : [];
     }
 }

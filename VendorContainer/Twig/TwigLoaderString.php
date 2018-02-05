@@ -73,9 +73,9 @@ class TwigLoaderString implements Twig_LoaderInterface
     
     /**
      * Returns true if the template is still fresh.
-     * @param string    $name The template name
+     * @param string $name The template name
      * @param timestamp $time The last modification time of the cached template
-     * @return bool    true if the template is fresh, false otherwise
+     * @return bool true if the template is fresh, false otherwise
      * @throws Twig_Error_Loader When $name is not found
      */
     public function isFresh($name, $time): bool

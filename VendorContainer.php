@@ -43,7 +43,7 @@ class VendorContainer extends AbstractContainer
     /**
      * @return \Redis
      */
-    public static function getRedis()
+    public static function getRedis(): Redis
     {
         /* @var $redis \Redis */
         $redis = self::buildObject('\Redis');
@@ -75,7 +75,6 @@ class VendorContainer extends AbstractContainer
      */
     public static function newTwig($content = null, $name = null, bool $persist = false)
     {
-        self::loadComposer();
         $loader = new TwigLoaderString();
         $name = $loader->register($content, $name, $persist);
         $twig = (new Twig($loader, self::getTwigConfig()));
@@ -86,7 +85,7 @@ class VendorContainer extends AbstractContainer
     /**
      * @return array
      */
-    protected static function getTwigConfig()
+    protected static function getTwigConfig(): array
     {
         $cacheDir = defined('APP_PATH') ? APP_PATH . self::TWIG_CACHE_DIR : sys_get_temp_dir();
         return [
@@ -98,7 +97,7 @@ class VendorContainer extends AbstractContainer
     /**
      * @return SecurityPolicy
      */
-    protected static function buildSandboxPolicies()
+    protected static function buildSandboxPolicies(): SecurityPolicy
     {
         $tags = ['for', 'if', 'set'];
         $filters = [
@@ -109,18 +108,5 @@ class VendorContainer extends AbstractContainer
         $properties = [];
         $functions  = [];
         return new SecurityPolicy($tags, $filters, $methods, $properties, $functions);
-    }
-    
-    /**
-     * Charge l'autoload de composer
-     */
-    public static function loadComposer()
-    {
-        $loaded = false;
-        
-        if (!$loaded) {
-            include_once __DIR__ . '/../../../vendor/autoload.php';
-            $loaded = true;
-        }
     }
 }
