@@ -1,0 +1,32 @@
+{
+    "name": "osflab/filter",
+    "description": "OSF filters based on ZF2/3",
+    "type": "library",
+    "homepage": "https://github.com/osflab/filter",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/filter/issues",
+        "source": "https://github.com/osflab/filter"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "zendframework/zend-filter": "~2.7.2"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Filter\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
