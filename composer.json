@@ -1,0 +1,35 @@
+{
+    "name": "osflab/crypt",
+    "description": "OSF encryption, decryption and hashing component",
+    "type": "library",
+    "homepage": "https://github.com/osflab/crypt",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/crypt/issues",
+        "source": "https://github.com/osflab/crypt"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "ext-mcrypt": "*"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Crypt\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
