@@ -1,0 +1,33 @@
+{
+    "name": "osflab/doc-maker",
+    "description": "OSF document generator",
+    "type": "library",
+    "homepage": "https://github.com/osflab/doc-maker",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/doc-maker/issues",
+        "source": "https://github.com/osflab/doc-maker"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "erusev/parsedown": "^1.6",
+        "osflab/stream": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\DocMaker\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
