@@ -14,7 +14,7 @@ use Osf\Application\Bootstrap;
 use Osf\Controller\Router;
 use Osf\Stream\Text as T;
 use Osf\Session\AppSession as Session;
-use Osf\Cache;
+use Osf\Cache\OsfCache as Cache;
 
 /**
  * General OSF container (IOC)
@@ -36,11 +36,11 @@ class OsfContainer extends AbstractContainer
     protected static $mockNamespace = 'real';
     
     /**
-     * @return \Osf\Application
+     * @return \Osf\Application\OsfApplication
      */
-    public static function getApplication(): \Osf\Application
+    public static function getApplication(): \Osf\Application\OsfApplication
     {
-        return self::buildObject('\Osf\Application');
+        return self::buildObject('\Osf\Application\OsfApplication');
     }
 
     /**
@@ -169,11 +169,11 @@ class OsfContainer extends AbstractContainer
      * Get Osf Crypt object. Parameters are usefull ONLY for the first call
      * @param string $cryptKey
      * @param string $mode
-     * @return \Osf\Crypt
+     * @return \Osf\Crypt\Crypt
      */
-    public static function getCrypt($cryptKey = Crypt::DEFAULT_KEY, $mode = Crypt::MODE_ASCII): \Osf\Crypt
+    public static function getCrypt($cryptKey = Crypt::DEFAULT_KEY, $mode = Crypt::MODE_ASCII): \Osf\Crypt\Crypt
     {
-        return self::buildObject('\Osf\Crypt', array($cryptKey, $mode));
+        return self::buildObject('\Osf\Crypt\Crypt', array($cryptKey, $mode));
     }
     
     /**
@@ -195,11 +195,11 @@ class OsfContainer extends AbstractContainer
     
     /**
      * @param string $content
-     * @return \Osf\DocMaker
+     * @return \Osf\DocMaker\DocMaker
      */
-    public static function getDocMaker($content = null): \Osf\DocMaker
+    public static function getDocMaker($content = null): \Osf\DocMaker\DocMaker
     {
-        $docMaker = self::buildObject('\Osf\DocMaker');
+        $docMaker = self::buildObject('\Osf\DocMaker\DocMaker');
         if ($content !== null) {
             $docMaker->setContent($content);
         }
@@ -235,11 +235,11 @@ class OsfContainer extends AbstractContainer
     
     /**
      * @param string $namespace
-     * @return \Osf\Cache
+     * @return \Osf\Cache\OsfCache
      */
-    public static function getCache(string $namespace = Cache::DEFAULT_NAMESPACE): \Osf\Cache
+    public static function getCache(string $namespace = Cache::DEFAULT_NAMESPACE): \Osf\Cache\OsfCache
     {
-        return self::buildObject('\Osf\Cache', [$namespace], $namespace);
+        return self::buildObject('\Osf\Cache\OsfCache', [$namespace], $namespace);
     }
     
     /**

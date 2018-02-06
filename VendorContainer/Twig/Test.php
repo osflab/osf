@@ -11,7 +11,7 @@ namespace Osf\Container\VendorContainer\Twig;
 use Osf\Test\Runner as OsfTest;
 use Osf\Container\VendorContainer;
 use Osf\Container\OsfContainer as Container;
-use Osf\Crypt;
+use Osf\Crypt\Crypt;
 use Twig_TemplateWrapper as Twig;
 
 /**

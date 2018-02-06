@@ -33,7 +33,6 @@
         "osflab/session": "~3.0.0",
         "osflab/cache": "~3.0.0",
         "osflab/locale": "~3.0.0",
-        "osflab/": "~3.0.0",
         "zendframework/zend-db": "^2.9",
         "zendframework/zend-authentication": "^2.5",
         "zendframework/zend-i18n": "^2.7",

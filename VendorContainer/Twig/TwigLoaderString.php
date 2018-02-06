@@ -11,7 +11,7 @@ namespace Osf\Container\VendorContainer\Twig;
 use Twig_LoaderInterface;
 use Twig_Source;
 use Twig_Error_Loader;
-use Osf\Crypt;
+use Osf\Crypt\Crypt;
 use Osf\Container\OsfContainer as Container;
 
 /**

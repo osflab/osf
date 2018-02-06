@@ -28,7 +28,7 @@ class Test extends OsfTest
     {
         self::reset();
         $application = Container::getApplication();
-        self::assert($application instanceof \Osf\Application, 'Object builded wrong');
+        self::assert($application instanceof \Osf\Application\OsfApplication, 'Object builded wrong');
         $obj = Container::buildObject('\stdClass');
         self::assert(is_object($obj), 'Obj is not an object');
         self::assert($obj instanceof \stdClass, 'Obj is not a stdclass instance');
@@ -36,7 +36,7 @@ class Test extends OsfTest
         self::assert($obj2 instanceof \stdClass, 'Obj2 is not a stdclass instance');
         self::assert($obj2 !== $obj, 'Obj2 and Obj is the same instance');
         $instances = Container::getInstances();
-        self::assert(isset($instances['\Osf\Application']['default']), 'An instance not found in container');
+        self::assert(isset($instances['\Osf\Application\OsfApplication']['default']), 'An instance not found in container');
         self::assert(isset($instances['\stdClass']['default']), 'An instance not found in container');
         self::assert(isset($instances['\stdClass']['new']), 'An instance not found in container');
         Container::getConfig()->appendConfig(['redis' => ['auth' => 'masterflow']]);
