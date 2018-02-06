@@ -51,7 +51,11 @@ class OsfCache
                 $this->redis = VendorContainer::getRedis();
             } else {
                 $this->redis = new \Redis();
-                $this->redis->connect('127.0.0.1', 6379);
+                $this->redis->pconnect('127.0.0.1', 6379);
+                $this->redis->setOption(Redis::OPT_SERIALIZER, 
+                        defined('Redis::SERIALIZER_IGBINARY')
+                        ? Redis::SERIALIZER_IGBINARY
+                        : Redis::SERIALIZER_PHP);
             }
         }
         return $this->redis;
@@ -121,9 +125,12 @@ class OsfCache
     public function cleanAll(): int
     {
         $cpt = 0;
-        foreach ($this->getRedis()->keys($this->namespace . ':*') as $key) {
-            $this->getRedis()->del($key);
-            $cpt++;
+        $keys = $this->getRedis()->keys($this->namespace . ':*');
+        if ($keys) {
+            foreach ($keys as $key) {
+                $this->getRedis()->del($key);
+                $cpt++;
+            }
         }
         return $cpt;
     }
@@ -136,12 +143,6 @@ class OsfCache
     {
         return $this->getRedis()->del($this->namespace . self::NSKSEP . $key);
     }
-    
-    /**
-     * Clean cache containing tags (to be implemented)
-     * @param array $tags
-     * @return $this
-     */
     
     /**
      * Build and return a zend cache storage using OSF cache configuration
