@@ -43,6 +43,7 @@ class Crypt
      * Encrypt a string
      * @param string $str
      * @return string
+     * @todo remove dependency to deprecated mcrypt extension
      */
     public function encrypt(string $str): string
     {
@@ -54,6 +55,7 @@ class Crypt
      * Decrypt a string
      * @param string $str
      * @return string
+     * @todo remove dependency to deprecated mcrypt extension
      */
     public function decrypt(string $str): string
     {
@@ -61,7 +63,12 @@ class Crypt
         return mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $this->key, $crypted, MCRYPT_MODE_ECB, $this->getIv());
     }
 
-    protected function getIv()
+    /**
+     * @staticvar ?string $iv
+     * @return string
+     * @todo remove dependency to deprecated mcrypt extension
+     */
+    protected function getIv(): string
     {
         static $iv = null;
 
@@ -89,6 +96,7 @@ class Crypt
     }
 
     /**
+     * Bind to bin2hex
      * @param mixed $b
      * @return string
      */
@@ -98,7 +106,7 @@ class Crypt
     }
     
     /**
-     * FR: Hash général. Utiliser passwordHash() pour les mots de passe
+     * Main hash function. Use passwordHash() for passwords
      * @param string $data
      * @param bool $secure
      * @return string
@@ -109,7 +117,7 @@ class Crypt
     }
     
     /**
-     * FR: Hash un mot de passe 
+     * Hash a password with password_hash function
      * @param string $password 72 caractères maximum
      * @param string $algo
      * @return string 60 caractères
@@ -120,6 +128,7 @@ class Crypt
     }
     
     /**
+     * Check if a password matches a hash
      * FR: Vérifie si un mot de passe correspond à un hash 
      * @param string $password 72 caractères maximum
      * @param string $hash
@@ -131,7 +140,7 @@ class Crypt
     }
     
     /**
-     * FR: Chaîne hashée aléatoire
+     * Get a random hash string
      * @param bool $secure
      * @return string
      */
