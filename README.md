@@ -5,7 +5,7 @@
 Download & install:
 
 ```bash
-git clone git@github.com:osflab/doc-maker.git
+git clone https://github.com/osflab/doc-maker.git
 cd doc-maker && composer update
 ```
 
