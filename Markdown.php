@@ -8,8 +8,6 @@
 
 namespace Osf\DocMaker;
 
-require_once __DIR__ . '/../../../vendor/erusev/parsedown/Parsedown.php';
-
 use Parsedown;
 use Osf\Stream\Text as T;
 
