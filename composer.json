@@ -19,6 +19,12 @@
         "erusev/parsedown": "^1.6",
         "osflab/stream": "~3.0.0"
     },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "suggest": {
+        "osflab/view": "~3.0.0"
+    },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
