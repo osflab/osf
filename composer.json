@@ -16,7 +16,8 @@
     },
     "require": {
         "php": "^7.1.0",
-        "ext-redis": "*"
+        "ext-redis": "*",
+        "osflab/exception": "~3.0.0"
     },
     "require-dev": {
         "osflab/test": "~3.0.0"
