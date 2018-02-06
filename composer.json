@@ -1,0 +1,38 @@
+{
+    "name": "osflab/bean",
+    "description": "OSF bean component",
+    "type": "library",
+    "homepage": "https://github.com/osflab/bean",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/bean/issues",
+        "source": "https://github.com/osflab/bean"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "osflab/stream": "~3.0.0",
+        "osflab/exception": "~3.0.0"
+    },
+    "suggest": {
+        "osflab/crypt": "~3.0.0",
+        "osflab/container": "~3.0.0",
+        "osflab/doc-maker": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Bean\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
