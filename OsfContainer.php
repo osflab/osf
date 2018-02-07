@@ -177,11 +177,11 @@ class OsfContainer extends AbstractContainer
     }
     
     /**
-     * @return \Osf\Navigation
+     * @return \Osf\Navigation\Menus
      */
-    public static function getNavigation(): \Osf\Navigation
+    public static function getNavigationMenus(): \Osf\Navigation\Menus
     {
-        return self::buildObject('\Osf\Navigation');
+        return self::buildObject('\Osf\Navigation\Menus');
     }
     
     /**
@@ -190,7 +190,7 @@ class OsfContainer extends AbstractContainer
      */
     public static function getNavigationMenu($menu = 'main'): \Osf\Navigation\Item
     {
-        return self::getNavigation()->getNavigation($menu);
+        return self::getNavigationMenus()->getNavigation($menu);
     }
     
     /**
@@ -243,10 +243,10 @@ class OsfContainer extends AbstractContainer
     }
     
     /**
-     * @return \Osf\Locale
+     * @return \Osf\Application\Locale
      */
-    public static function getLocale(): \Osf\Locale
+    public static function getLocale(): \Osf\Application\Locale
     {
-        return self::buildObject('\Osf\Locale');
+        return self::buildObject('\Osf\Application\Locale');
     }
 }
