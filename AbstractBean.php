@@ -13,7 +13,7 @@ use Osf\Exception\ArchException;
 use Osf\Crypt\Crypt;
 
 /**
- * Beans top class
+ * Beans super class
  * 
  * @author Guillaume Ponçon <guillaume.poncon@openstates.com>
  * @copyright OpenStates
