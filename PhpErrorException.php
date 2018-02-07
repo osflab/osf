@@ -89,16 +89,16 @@ class PhpErrorException extends \Exception
     }
     
     /**
-     * Error -> Osf\Log
+     * Error -> Osf\Log\LogProxy
      * @param self $e
      * @return void
      */
     protected static function logError(self $e): void
     {
-        if (class_exists('\Osf\Log')) {
+        if (class_exists('\Osf\Log\LogProxy')) {
             $msg = get_class($e) . ' : ' . $e->getMessage();
             try {
-                \Osf\Log::error($msg, 'PHPERR', $e->getTraceAsString());
+                \Osf\Log\LogProxy::error($msg, 'PHPERR', $e->getTraceAsString());
             } catch (\Exception $ex) {
                 file_put_contents(sys_get_temp_dir() . '/undisplayed-sma-errors.log', date('Ymd-His-') . $ex->getMessage(), FILE_APPEND);
             }
@@ -114,7 +114,7 @@ class PhpErrorException extends \Exception
     {
         if (class_exists('\Osf\Application\OsfApplication')) {
             if (\Osf\Application\OsfApplication::isDevelopment()) {
-                \Osf\Error::displayException($e);
+                \Osf\Exception\Error::displayException($e);
             } else {
                 if (\Osf\Application::isStaging()) {
                     $err = sprintf(__("%s. Details in log file."), $e->getMessage());
