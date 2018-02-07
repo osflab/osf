@@ -112,8 +112,8 @@ class PhpErrorException extends \Exception
      */
     protected static function triggerApplication(self $e): void
     {
-        if (class_exists('\Osf\Application')) {
-            if (\Osf\Application::isDevelopment()) {
+        if (class_exists('\Osf\Application\OsfApplication')) {
+            if (\Osf\Application\OsfApplication::isDevelopment()) {
                 \Osf\Error::displayException($e);
             } else {
                 if (\Osf\Application::isStaging()) {
