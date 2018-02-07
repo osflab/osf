@@ -129,7 +129,6 @@ class Crypt
     
     /**
      * Check if a password matches a hash
-     * FR: Vérifie si un mot de passe correspond à un hash 
      * @param string $password 72 caractères maximum
      * @param string $hash
      * @return bool
