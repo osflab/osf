@@ -16,10 +16,15 @@
     },
     "require": {
         "php": "^7.1.0",
-        "zendframework/zend-filter": "~2.7.2"
+        "zendframework/zend-filter": "~2.7.2",
+        "osflab/exception": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
     },
     "suggest": {
-        "osflab/stream": "For phraseCleaner and UcPhrase"
+        "osflab/stream": "For phraseCleaner and UcPhrase",
+        "osflab/generator": "For the Filter quick access helper"
     },
     "minimum-stability": "dev",
     "autoload": {

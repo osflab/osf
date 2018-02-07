@@ -11,7 +11,7 @@ namespace Osf\Filter;
 use Zend\Filter\AbstractFilter as ZAF;
 
 /**
- * Osf filters top class
+ * OSF parent class for filters
  *
  * @author Guillaume Ponçon <guillaume.poncon@openstates.com>
  * @copyright OpenStates
