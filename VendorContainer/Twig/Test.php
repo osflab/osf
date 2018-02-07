@@ -32,7 +32,6 @@ class Test extends OsfTest
         $template = 'Bonjour {{contact.nom}}, vous êtes <b>beau</b> et avez {{contact.age}} ans.';
         $values = ['contact' => ['nom' => 'Guillaume <b>Ponçon</b>', 'age' => 30]];
         $expected = 'Bonjour Guillaume <b>Ponçon</b>, vous êtes <b>beau</b> et avez 30 ans.';
-        Container::getConfig()->appendConfig(['redis' => ['auth' => 'masterflow']]);
         $twig = VendorContainer::newTwig($template);
         self::assert($twig instanceof Twig);
         $result = $twig->render($values);
@@ -42,6 +41,7 @@ class Test extends OsfTest
                 $values[Crypt::hash($i)][Crypt::hash($j)] = 'test';
             }
         }
+        
         $template = str_repeat($template, 500);
         $expected = str_repeat($expected, 500);
         $time = microtime(true);

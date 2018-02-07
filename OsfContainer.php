@@ -74,20 +74,20 @@ class OsfContainer extends AbstractContainer
     }
     
     /**
-     * @return \Osf\View
+     * @return \Osf\View\OsfView
      */
-    public static function getView(): \Osf\View
+    public static function getView(): \Osf\View\OsfView
     {
-        return self::buildObject('\Osf\View', array(), 'view');
+        return self::buildObject('\Osf\View\OsfView', array(), 'view');
     }
     
     /**
      * @task [LAYOUT] voir à terme si afterBuildLayout est utile...
-     * @return \Osf\View
+     * @return \Osf\View\OsfView
      */
-    public static function getLayout(bool $callBootstrap = false): \Osf\View
+    public static function getLayout(bool $callBootstrap = false): \Osf\View\OsfView
     {
-        return self::buildObject('\Osf\View', [], 'layout', null, $callBootstrap ? 'afterBuildLayout' : null);
+        return self::buildObject('\Osf\View\OsfView', [], 'layout', null, $callBootstrap ? 'afterBuildLayout' : null);
     }
     
     /**

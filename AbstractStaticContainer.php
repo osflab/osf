@@ -9,7 +9,7 @@
 namespace Osf\Container;
 
 /**
- * Top class of static containers (quick access classes)
+ * Parent class of static containers (quick access classes)
  *
  * For example, quick view helpers class use: 
  * H::box(...)
