@@ -1,0 +1,43 @@
+{
+    "name": "osflab/generator",
+    "description": "OSF high-level code generator",
+    "type": "library",
+    "homepage": "https://github.com/osflab/generator",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/generator/issues",
+        "source": "https://github.com/osflab/generator"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "zendframework/zend-db": "^2.9",
+        "zendframework/zend-code": "^3.3",
+        "zendframework/zend-filter": "~2.7.2",
+        "zendframework/zend-validator": "~2.10.2",
+        "zendframework/zend-form": "^2.11",
+        "zendframework/zend-view": "^2.10",
+        "osflab/exception": "~3.0.0",
+        "osflab/stream": "~3.0.0"
+    },
+    "suggest": {
+        "osflab/container": "App config detection",
+        "osflab/application": "App config detection"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Generator\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
