@@ -9,7 +9,7 @@
 
 namespace Osf\Controller;
 
-use Osf\Console\Base as ConsoleBase;
+use Osf\Console\ConsoleHelper as ConsoleBase;
 use Osf\Application\OsfApplication as Application;
 use Osf\Generator\DbGenerator;
 use Osf\Generator\ZendGenerator;
