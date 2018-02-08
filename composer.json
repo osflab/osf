@@ -1,0 +1,44 @@
+{
+    "name": "osflab/form",
+    "description": "OSF form generator",
+    "type": "library",
+    "homepage": "https://github.com/osflab/form",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/form/issues",
+        "source": "https://github.com/osflab/form"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "zendframework/zend-filter": "~2.7.2",
+        "zendframework/zend-validator": "~2.10.2",
+        "osflab/filter": "~3.0.0",
+        "osflab/validator": "~3.0.0",
+        "osflab/stream": "~3.0.0",
+        "osflab/container": "~3.0.0",
+        "osflab/exception": "~3.0.0",
+        "osflab/view": "~3.0.0"
+    },
+    "suggest": {
+        "osflab/db": "For TableForm",
+        "osflab/session": "Persistence options",
+        "osflab/application": "OSF app integration"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Form\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
