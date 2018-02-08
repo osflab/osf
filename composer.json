@@ -26,6 +26,11 @@
     "require-dev": {
         "osflab/test": "~3.0.0"
     },
+    "provide": {
+        "osflab/application": "3.0.0",
+        "osflab/exception": "3.0.0",
+        "osflab/navigation": "3.0.0"
+    },
     "suggest": {
         "osflab/view": "~3.0.0",
         "zendframework/zend-db": "^2.9"
