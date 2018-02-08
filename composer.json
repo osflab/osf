@@ -21,6 +21,10 @@
     "require-dev": {
         "osflab/test": "~3.0.0"
     },
+    "provide": {
+        "osflab/controller": "3.0.0",
+        "osflab/test": "3.0.0"
+    },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
