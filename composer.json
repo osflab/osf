@@ -23,6 +23,23 @@
     "require-dev": {
         "osflab/test": "~3.0.0"
     },
+    "provide": {
+        "osflab/application": "3.0.0",
+        "osflab/controller": "3.0.0",
+        "osflab/db": "3.0.0",
+        "osflab/device": "3.0.0",
+        "osflab/doc-maker": "3.0.0",
+        "osflab/exception": "3.0.0",
+        "osflab/form": "3.0.0",
+        "osflab/image": "3.0.0",
+        "osflab/navigation": "3.0.0",
+        "osflab/office": "3.0.0",
+        "osflab/pdf": "3.0.0",
+        "osflab/safety": "3.0.0",
+        "osflab/stream": "3.0.0",
+        "osflab/test": "3.0.0",
+        "osflab/view": "3.0.0"
+    },
     "suggest": {
         "osflab/application": "~3.0.0",
         "osflab/controller": "~3.0.0",
