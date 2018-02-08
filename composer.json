@@ -25,7 +25,13 @@
         "osflab/exception": "~3.0.0",
         "osflab/stream": "~3.0.0"
     },
+    "provide": {
+        "osflab/controller": "3.0.0"
+    },
     "suggest": {
+        "osflab/filter": "Filters generation",
+        "osflab/validator": "Validators generation",
+        "osflab/view": "View helpers generation",
         "osflab/container": "App config detection",
         "osflab/application": "App config detection"
     },
