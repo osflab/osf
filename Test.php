@@ -39,7 +39,6 @@ class Test extends OsfTest
         self::assert(isset($instances['\Osf\Application\OsfApplication']['default']), 'An instance not found in container');
         self::assert(isset($instances['\stdClass']['default']), 'An instance not found in container');
         self::assert(isset($instances['\stdClass']['new']), 'An instance not found in container');
-        Container::getConfig()->appendConfig(['redis' => ['auth' => 'masterflow']]);
         $string = 'Bonjour {{ contact.nom }}, ça va ?';
         $data = ['contact' => ['nom' => "Guillaume"]];
         $twig = VendorContainer::newTwig($string, null, false);

@@ -17,7 +17,8 @@
     "require": {
         "php": "^7.1.0",
         "osflab/exception": "~3.0.0",
-        "osflab/stream": "~3.0.0"
+        "osflab/stream": "~3.0.0",
+        "twig/twig": "^2.4"
     },
     "require-dev": {
         "osflab/test": "~3.0.0"
@@ -37,8 +38,7 @@
         "zendframework/zend-authentication": "^2.5",
         "zendframework/zend-i18n": "^2.7",
         "zendframework/zend-i18n-resources": "^2.5",
-        "ext-redis": "*",
-        "twig/twig": "^2.4"
+        "ext-redis": "*"
     },
     "minimum-stability": "dev",
     "autoload": {
