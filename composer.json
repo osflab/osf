@@ -15,10 +15,7 @@
         "source": "https://github.com/osflab/exception"
     },
     "require": {
-        "php": "^7.1.0",
-        "osflab/container": "~3.0.0",
-        "osflab/controller": "~3.0.0",
-        "osflab/log": "~3.0.0"
+        "php": "^7.1.0"
     },
     "require-dev": {
         "osflab/test": "~3.0.0"
@@ -28,7 +25,6 @@
         "osflab/bean": "3.0.0",
         "osflab/cache": "3.0.0",
         "osflab/config": "3.0.0",
-        "osflab/console": "3.0.0",
         "osflab/container": "3.0.0",
         "osflab/controller": "3.0.0",
         "osflab/crypt": "3.0.0",
@@ -47,11 +43,13 @@
         "osflab/safety": "3.0.0",
         "osflab/session": "3.0.0",
         "osflab/stream": "3.0.0",
-        "osflab/test": "3.0.0",
         "osflab/validator": "3.0.0",
         "osflab/view": "3.0.0"
     },
     "suggest": {
+        "osflab/container": "~3.0.0",
+        "osflab/controller": "~3.0.0",
+        "osflab/log": "~3.0.0",
         "osflab/view": "~3.0.0",
         "osflab/application": "~3.0.0"
     },
