@@ -22,7 +22,8 @@
         "osflab/container": "~3.0.0",
         "osflab/stream": "~3.0.0",
         "osflab/controller": "~3.0.0",
-        "osflab/exception": "~3.0.0"
+        "osflab/exception": "~3.0.0",
+        "osflab/helper": "~3.0.0"
     },
     "require-dev": {
         "osflab/test": "~3.0.0"
