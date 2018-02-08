@@ -22,7 +22,8 @@
         "zendframework/zend-validator": "~2.10.2",
         "zendframework/zend-hydrator": "~2.3.1",
         "osflab/exception": "~3.0.0",
-        "osflab/container": "~3.0.0"
+        "osflab/container": "~3.0.0",
+        "osflab/stream": "~3.0.0"
     },
     "suggest": {
         "osflab/form": "~3.0.0",
