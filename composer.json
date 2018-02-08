@@ -19,6 +19,9 @@
         "osflab/stream": "~3.0.0",
         "osflab/exception": "~3.0.0"
     },
+    "provide": {
+        "osflab/pdf": "3.0.0"
+    },
     "suggest": {
         "osflab/crypt": "~3.0.0",
         "osflab/container": "~3.0.0",
