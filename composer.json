@@ -23,7 +23,6 @@
         "osflab/test": "~3.0.0"
     },
     "provide": {
-        "osflab/exception": "3.0.0",
         "osflab/safety": "3.0.0"
     },
     "minimum-stability": "dev",
