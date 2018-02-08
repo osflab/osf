@@ -22,6 +22,10 @@
     "require-dev": {
         "osflab/test": "~3.0.0"
     },
+    "provide": {
+        "osflab/navigation": "3.0.0",
+        "osflab/pdf": "3.0.0"
+    },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
