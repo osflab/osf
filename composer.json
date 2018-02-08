@@ -18,7 +18,8 @@
         "php": "^7.1.0",
         "erusev/parsedown": "^1.6",
         "osflab/stream": "~3.0.0",
-        "osflab/exception": "~3.0.0"
+        "osflab/exception": "~3.0.0",
+        "osflab/container": "~3.0.0"
     },
     "require-dev": {
         "osflab/test": "~3.0.0"
