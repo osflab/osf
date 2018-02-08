@@ -1,0 +1,41 @@
+{
+    "name": "osflab/navigation",
+    "description": "OSF navigation component",
+    "type": "library",
+    "homepage": "https://github.com/osflab/navigation",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/navigation/issues",
+        "source": "https://github.com/osflab/navigation"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "osflab/application": "~3.0.0",
+        "osflab/view": "~3.0.0",
+        "osflab/container": "~3.0.0",
+        "osflab/stream": "~3.0.0",
+        "osflab/controller": "~3.0.0",
+        "osflab/exception": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Navigation\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
