@@ -23,6 +23,10 @@
     "require-dev": {
         "osflab/test": "~3.0.0"
     },
+    "provide": {
+        "osflab/office": "3.0.0",
+        "osflab/safety": "3.0.0"
+    },
     "suggest": {
         "osflab/container": "~3.0.0",
         "osflab/application": "~3.0.0"
