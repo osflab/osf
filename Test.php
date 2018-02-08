@@ -9,7 +9,7 @@
 namespace Osf\Console;
 
 use Osf\Test\Runner as OsfTest;
-use Osf\Console\Base as Console;
+use Osf\Console\ConsoleHelper as Console;
 
 /**
  * @author Guillaume Ponçon <guillaume.poncon@openstates.com>

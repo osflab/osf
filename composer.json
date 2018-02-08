@@ -15,8 +15,7 @@
         "source": "https://github.com/osflab/console"
     },
     "require": {
-        "php": "^7.1.0",
-        "osflab/exception": "~3.0.0"
+        "php": "^7.1.0"
     },
     "require-dev": {
         "osflab/test": "~3.0.0"
