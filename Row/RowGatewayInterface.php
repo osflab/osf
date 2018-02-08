@@ -41,10 +41,4 @@ interface RowGatewayInterface
      * @return array
      */
     public function toArray();
-    
-    /**
-     * @param array $data
-     * @param bool $rowExistsInDatabase
-     */
-    //public function populate(array $data, $rowExistsInDatabase = false);
 }

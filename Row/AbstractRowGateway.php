@@ -38,7 +38,7 @@ abstract class AbstractRowGateway
     protected $extraData = [];
     
     /**
-     * Initialisation avec la création du SQL avec le schéma
+     * FR: Initialisation avec la création du SQL avec le schéma
      * @see \Zend\Db\RowGateway\AbstractRowGateway::initialize()
      */
     public function initialize()
@@ -54,7 +54,7 @@ abstract class AbstractRowGateway
     }
     
     /**
-     * Injecte une valeur dans un champ
+     * FR: Injecte une valeur dans un champ
      * 
      * Pour valider et filtrer, surcharger cette méthode plutôt que les accesseurs
      * 
@@ -87,7 +87,7 @@ abstract class AbstractRowGateway
     }
     
     /**
-     * Récupère la valeur d'un champ
+     * FR: Récupère la valeur d'un champ
      * 
      * Pour filtrer, surcharger cette méthode plutôt que les accesseurs
      * 
@@ -140,7 +140,7 @@ abstract class AbstractRowGateway
     }
     
     /**
-     * Retourne l'enregistrement lié à une clé étrangère
+     * FR: Retourne l'enregistrement lié à une clé étrangère
      * @param string $value
      * @param string $fkTable
      * @param string $fkField
@@ -152,7 +152,7 @@ abstract class AbstractRowGateway
     }
     
     /**
-     * Retourne les enregistrements d'une table dont une clé étrangère référence la table courante
+     * FR: Retourne les enregistrements d'une table dont une clé étrangère référence la table courante
      * @param string $fkTable
      * @param string $fkField
      * @param string $pkValue
@@ -178,7 +178,7 @@ abstract class AbstractRowGateway
     }
     
     /**
-     * Récupère l'enregistrement sous forme de tableau avec éventuellement les champs mentionnés
+     * FR: Récupère l'enregistrement sous forme de tableau avec éventuellement les champs mentionnés
      * @see \Zend\Db\RowGateway\AbstractRowGateway::toArray()
      * @param array $fields
      * @return array
