@@ -17,8 +17,7 @@
     "require": {
         "php": "^7.1.0",
         "osflab/exception": "~3.0.0",
-        "osflab/stream": "~3.0.0",
-        "twig/twig": "^2.4"
+        "osflab/stream": "~3.0.0"
     },
     "require-dev": {
         "osflab/test": "~3.0.0"
@@ -44,11 +43,11 @@
         "osflab/view": "~3.0.0",
         "osflab/crypt": "~3.0.0",
         "osflab/navigation": "~3.0.0",
-        "osflab/docmaker": "~3.0.0",
+        "osflab/doc-maker": "~3.0.0",
         "osflab/device": "~3.0.0",
         "osflab/session": "~3.0.0",
         "osflab/cache": "~3.0.0",
-        "osflab/locale": "~3.0.0",
+        "twig/twig": "^2.4",
         "zendframework/zend-db": "^2.9",
         "zendframework/zend-authentication": "^2.5",
         "zendframework/zend-i18n": "^2.7",
