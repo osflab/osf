@@ -10,7 +10,6 @@ namespace Osf\Container\VendorContainer\Twig;
 
 use Osf\Test\Runner as OsfTest;
 use Osf\Container\VendorContainer;
-use Osf\Container\OsfContainer as Container;
 use Osf\Crypt\Crypt;
 use Twig_TemplateWrapper as Twig;
 
@@ -49,7 +48,7 @@ class Test extends OsfTest
         $result = $twig->render($values);
         self::assertEqual($result, $expected);
         $duration = round((microtime(true) - $time) * 1000);
-        self::assert($duration < 100);
+        self::assert($duration < 200, 'Slow compilation detected');
         $template = 'Bonjour {{contact.nom|upper}}, vous êtes <b>beau</b> et avez {{contact.age}} ans.';
         $values = ['contact' => ['nom' => 'Guillaume <b>Ponçon</b>', 'age' => 30]];
         $expected = 'Bonjour GUILLAUME <B>PONÇON</B>, vous êtes <b>beau</b> et avez 30 ans.';
