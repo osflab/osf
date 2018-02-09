@@ -27,7 +27,7 @@
         "osflab/safety": "3.0.0"
     },
     "suggest": {
-        "zendframework/zend-cache": "^2.7",
+        "zendframework/zend-cache": "~2.7.2",
         "osflab/container": "~3.0.0",
         "osflab/application": "~3.0.0"
     },
