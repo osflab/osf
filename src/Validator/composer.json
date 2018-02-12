@@ -1,0 +1,41 @@
+{
+    "name": "osflab/validator",
+    "description": "OSF validators based on ZF2/3",
+    "type": "library",
+    "homepage": "https://github.com/osflab/validator",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/validator/issues",
+        "source": "https://github.com/osflab/validator"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "zendframework/zend-validator": "2.10.2",
+        "osflab/exception": "~3.0.0",
+        "osflab/stream": "~3.0.0",
+        "osflab/generator": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "provide": {
+        "osflab/form": "3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Validator\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
