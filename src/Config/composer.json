@@ -1,0 +1,40 @@
+{
+    "name": "osflab/config",
+    "description": "OSF config component",
+    "type": "library",
+    "homepage": "https://github.com/osflab/config",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/config/issues",
+        "source": "https://github.com/osflab/config"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "osflab/exception": "~3.0.0",
+        "osflab/stream": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "suggest": {
+        "osflab/form": "~3.0.0",
+        "osflab/db": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Config\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
