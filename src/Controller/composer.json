@@ -1,0 +1,48 @@
+{
+    "name": "osflab/controller",
+    "description": "OSF controller component",
+    "type": "library",
+    "homepage": "https://github.com/osflab/controller",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/controller/issues",
+        "source": "https://github.com/osflab/controller"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "osflab/console": "~3.0.0",
+        "osflab/application": "~3.0.0",
+        "osflab/generator": "~3.0.0",
+        "osflab/stream": "~3.0.0",
+        "osflab/container": "~3.0.0",
+        "osflab/exception": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "provide": {
+        "osflab/application": "3.0.0",
+        "osflab/navigation": "3.0.0"
+    },
+    "suggest": {
+        "osflab/view": "~3.0.0",
+        "zendframework/zend-db": "~2.9.2"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Controller\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
