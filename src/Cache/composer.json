@@ -1,0 +1,45 @@
+{
+    "name": "osflab/cache",
+    "description": "OSF cache proxy optimized for performance",
+    "type": "library",
+    "homepage": "https://github.com/osflab/cache",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/cache/issues",
+        "source": "https://github.com/osflab/cache"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "ext-redis": "*",
+        "osflab/exception": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "provide": {
+        "osflab/office": "3.0.0",
+        "osflab/safety": "3.0.0"
+    },
+    "suggest": {
+        "zendframework/zend-cache": "~2.7.2",
+        "osflab/container": "~3.0.0",
+        "osflab/application": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Cache\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
