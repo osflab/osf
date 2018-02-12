@@ -1,0 +1,35 @@
+{
+    "name": "osflab/device",
+    "description": "OSF simple device detection and manipulations",
+    "type": "library",
+    "homepage": "https://github.com/osflab/device",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/device/issues",
+        "source": "https://github.com/osflab/device"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "mobiledetect/mobiledetectlib": "~2.8.30",
+        "osflab/container": "~3.0.0",
+        "osflab/session": "~3.0.0",
+        "osflab/exception": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Device\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
