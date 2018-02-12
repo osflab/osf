@@ -1,0 +1,50 @@
+{
+    "name": "osflab/view",
+    "description": "OSF view component",
+    "type": "library",
+    "homepage": "https://github.com/osflab/view",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/view/issues",
+        "source": "https://github.com/osflab/view"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "zendframework/zend-db": "~2.9.2",
+        "zendframework/zend-paginator": "~2.8.1",
+        "zendframework/zend-view": "~2.10.0",
+        "osflab/container": "~3.0.0",
+        "osflab/exception": "~3.0.0",
+        "osflab/stream": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "provide": {
+        "osflab/form": "3.0.0",
+        "osflab/navigation": "3.0.0"
+    },
+    "suggest": {
+        "osflab/controller": "~3.0.0",
+        "osflab/db": "~3.0.0",
+        "osflab/crypt": "~3.0.0",
+        "osflab/form": "~3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\View\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
