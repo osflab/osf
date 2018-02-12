@@ -1,0 +1,38 @@
+{
+    "name": "osflab/console",
+    "description": "OSF simple unit test component",
+    "type": "library",
+    "homepage": "https://github.com/osflab/console",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/console/issues",
+        "source": "https://github.com/osflab/console"
+    },
+    "require": {
+        "php": "^7.1.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "provide": {
+        "osflab/controller": "3.0.0",
+        "osflab/test": "3.0.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Console\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
