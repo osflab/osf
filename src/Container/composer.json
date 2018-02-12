@@ -1,0 +1,68 @@
+{
+    "name": "osflab/container",
+    "description": "OSF dynamic object container mechanism",
+    "type": "library",
+    "homepage": "https://github.com/osflab/container",
+    "license": "AGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guillaume Ponçon",
+            "email": "guillaume.poncon@openstates.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/osflab/container/issues",
+        "source": "https://github.com/osflab/container"
+    },
+    "require": {
+        "php": "^7.1.0",
+        "osflab/exception": "~3.0.0",
+        "osflab/stream": "~3.0.0"
+    },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
+    "provide": {
+        "osflab/application": "3.0.0",
+        "osflab/controller": "3.0.0",
+        "osflab/db": "3.0.0",
+        "osflab/device": "3.0.0",
+        "osflab/doc-maker": "3.0.0",
+        "osflab/form": "3.0.0",
+        "osflab/image": "3.0.0",
+        "osflab/navigation": "3.0.0",
+        "osflab/office": "3.0.0",
+        "osflab/pdf": "3.0.0",
+        "osflab/safety": "3.0.0",
+        "osflab/stream": "3.0.0",
+        "osflab/view": "3.0.0"
+    },
+    "suggest": {
+        "osflab/application": "~3.0.0",
+        "osflab/controller": "~3.0.0",
+        "osflab/view": "~3.0.0",
+        "osflab/crypt": "~3.0.0",
+        "osflab/navigation": "~3.0.0",
+        "osflab/doc-maker": "~3.0.0",
+        "osflab/device": "~3.0.0",
+        "osflab/session": "~3.0.0",
+        "osflab/cache": "~3.0.0",
+        "twig/twig": "~2.4.4",
+        "zendframework/zend-db": "~2.9.2",
+        "zendframework/zend-authentication": "~2.5.3",
+        "zendframework/zend-i18n": "~2.7.4",
+        "zendframework/zend-i18n-resources": "^2.5.2",
+        "ext-redis": "*"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Osf\\Container\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.0.x-dev"
+        }
+    }
+}
