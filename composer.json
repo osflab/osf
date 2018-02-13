@@ -85,10 +85,5 @@
         "psr-4": {
             "Osf\\": "src"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
-        }
     }
 }

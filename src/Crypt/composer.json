@@ -31,10 +31,5 @@
         "psr-4": {
             "Osf\\Crypt\\": ""
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
-        }
     }
 }

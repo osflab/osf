@@ -35,10 +35,5 @@
         "psr-4": {
             "Osf\\Form\\": ""
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
-        }
     }
 }

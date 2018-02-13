@@ -36,10 +36,5 @@
         "psr-4": {
             "Osf\\Cache\\": ""
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "3.0.x-dev"
-        }
     }
 }
