@@ -27,7 +27,7 @@ use Zend\Code\Generator\MethodGenerator;
  */
 class ZendGenerator extends AbstractGenerator
 {
-    protected const ZF_VENDOR_PATH = '/../../../vendor/zendframework';
+    protected const ZF_VENDOR_PATH = '/../../vendor/zendframework';
     
     protected function getZendVendorPath(): string
     {

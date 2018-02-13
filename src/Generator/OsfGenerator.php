@@ -64,7 +64,7 @@ class OsfGenerator extends AbstractGenerator
 
     public function getBasePath()
     {
-        return dirname(dirname(__DIR__));
+        return dirname(__DIR__);
     }
 
     public function generateViewHelpers()
