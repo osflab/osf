@@ -29,7 +29,7 @@
     "suggest": {
         "osflab/generator": "For the Filter quick access helper"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Osf\\Filter\\": ""

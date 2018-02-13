@@ -21,7 +21,7 @@
         "osflab/session": "~3.0.0",
         "osflab/exception": "~3.0.0"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Osf\\Device\\": ""

@@ -25,7 +25,7 @@
     "provide": {
         "osflab/safety": "3.0.0"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Osf\\Log\\": ""
