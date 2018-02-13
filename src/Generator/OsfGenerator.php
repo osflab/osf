@@ -29,17 +29,17 @@ class OsfGenerator extends AbstractGenerator
             [
                 'name' => "\\Osf\\View\\Helper\\",
                 'prefix' => '',
-                'pattern' => '/Osf/View/Helper/*.php'
+                'pattern' => '/View/Helper/*.php'
             ],
             [
                 'name' => "\\Osf\\View\\Helper\\Bootstrap\\",
                 'prefix' => '',
-                'pattern' => '/Osf/View/Helper/Bootstrap/*.php'
+                'pattern' => '/View/Helper/Bootstrap/*.php'
             ],
             [
                 'name' => "\\Osf\\Form\\Helper\\",
                 'prefix' => '',
-                'pattern' => '/Osf/Form/Helper/*.php'
+                'pattern' => '/Form/Helper/*.php'
             ],
         ];
     
