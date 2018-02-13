@@ -8,6 +8,8 @@
 
 namespace Osf\Controller\Router;
 
+use Osf\Test\Runner as OsfTest;
+
 /**
  * Default router unit tests
  *
@@ -18,7 +20,7 @@ namespace Osf\Controller\Router;
  * @package osf
  * @subpackage test
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

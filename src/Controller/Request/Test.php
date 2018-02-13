@@ -9,6 +9,7 @@
 namespace Osf\Controller\Request;
 
 use Osf\Container\OsfContainer;
+use Osf\Test\Runner as OsfTest;
 
 /**
  * Request unit test
@@ -20,7 +21,7 @@ use Osf\Container\OsfContainer;
  * @package osf
  * @subpackage test
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

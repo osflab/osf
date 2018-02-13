@@ -9,6 +9,7 @@
 namespace Osf\Filter;
 
 use Osf\Filter\Telephone;
+use Osf\Test\Runner as OsfTest;
 
 /**
  * Filters unit tests
@@ -20,7 +21,7 @@ use Osf\Filter\Telephone;
  * @package osf
  * @subpackage test
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

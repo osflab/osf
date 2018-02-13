@@ -10,7 +10,7 @@ namespace Osf\Config;
 
 use Osf\Config\OsfConfig as Config;
 use Osf\Stream\Yaml;
-use Osf\Test\Runner as TestRunner;
+use Osf\Test\Runner as OsfTest;
 
 /**
  * Config unit test
@@ -22,7 +22,7 @@ use Osf\Test\Runner as TestRunner;
  * @package package
  * @subpackage subpackage
  */
-class Test extends TestRunner
+class Test extends OsfTest
 {
     public static function run()
     {

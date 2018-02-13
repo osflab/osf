@@ -9,6 +9,7 @@
 namespace Osf\DocMaker\DocMaker;
 
 use Osf\DocMaker\DocMaker;
+use Osf\Test\Runner as OsfTest;
 
 /**
  * @author Guillaume Ponçon <guillaume.poncon@openstates.com>
@@ -18,7 +19,7 @@ use Osf\DocMaker\DocMaker;
  * @package osf
  * @subpackage test
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

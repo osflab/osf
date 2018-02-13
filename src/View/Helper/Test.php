@@ -9,6 +9,7 @@
 namespace Osf\View\Helper;
 
 use Osf\Container\OsfContainer as Container;
+use Osf\Test\Runner as OsfTest;
 
 /**
  * View helpers unit tests
@@ -20,7 +21,7 @@ use Osf\Container\OsfContainer as Container;
  * @package osf
  * @subpackage test
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

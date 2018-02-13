@@ -9,6 +9,7 @@
 namespace Osf\Crypt;
 
 use Osf\Crypt\Crypt;
+use Osf\Test\Runner as OsfTest;
 
 /**
  * Crypt unit tests
@@ -21,7 +22,7 @@ use Osf\Crypt\Crypt;
  * @subpackage test
  * @todo need to work without trim()
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

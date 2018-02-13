@@ -9,6 +9,7 @@
 namespace Osf\Application\Config;
 
 use Osf\Application\Config;
+use Osf\Test\Runner as OsfTest;
 
 /**
  * Config manager unit tests
@@ -20,7 +21,7 @@ use Osf\Application\Config;
  * @package osf
  * @subpackage application
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

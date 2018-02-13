@@ -8,6 +8,8 @@
 
 namespace Osf\Navigation;
 
+use Osf\Test\Runner as OsfTest;
+
 /**
  * Tests for navigation structure
  *
@@ -18,7 +20,7 @@ namespace Osf\Navigation;
  * @package osf
  * @subpackage test
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {

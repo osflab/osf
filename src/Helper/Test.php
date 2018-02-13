@@ -8,6 +8,8 @@
 
 namespace Osf\Helper;
 
+use Osf\Test\Runner as OsfTest;
+
 /**
  * Array test
  *
@@ -18,7 +20,7 @@ namespace Osf\Helper;
  * @package osf
  * @subpackage test
  */
-class Test extends \Osf\Test\Runner
+class Test extends OsfTest
 {
     public static function run()
     {
