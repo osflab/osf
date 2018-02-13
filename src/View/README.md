@@ -1,6 +1,6 @@
 # OSF view component
 
-Under development
+The OSF view component with a lot of usefull bootstrap helpers.
 
 ## Features
 
