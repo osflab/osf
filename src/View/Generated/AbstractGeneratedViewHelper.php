@@ -15,7 +15,7 @@ use \Osf\View\AbstractHelper;
  *
  * @version 1.0
  * @author Guillaume Ponçon - OpenStates Framework PHP Generator
- * @since OSF 2.0
+ * @since OSF 3.0.0
  * @package osf
  * @subpackage generated
  * @property \Osf\View\Helper\BaseUrl $baseUrl
@@ -65,37 +65,37 @@ use \Osf\View\AbstractHelper;
  * @property \Osf\Form\Helper\FormTextarea $formTextarea
  * @property \Osf\Form\Helper\FormWithDecorators $formWithDecorators
  * @property \Osf\Form\Helper\Label $label
- * @method string baseUrl($uri = '', $withHost = false)
+ * @method string baseUrl(string $uri = '', bool $withHost = false)
  * @method string footTags()
  * @method string headTags()
- * @method \Osf\View\Helper\Html html($content, $elt = null, array $attributes = array(), $escape = true)
- * @method \Osf\View\Helper\HtmlList htmlList($type = null)
- * @method \Osf\View\Helper\Link link($label, $controller = null, $action = null, array $params = array(), array $attributes = array(), $htmlElement = 'a', array $cssClasses = array())
+ * @method \Osf\View\Helper\Html html($content, string $elt = null, array $attributes = [], bool $escape = true)
+ * @method \Osf\View\Helper\HtmlList htmlList(string $type = null)
+ * @method \Osf\View\Helper\Link link(string $label, $controller = null, $action = null, array $params = [], array $attributes = [], string $htmlElement = 'a', array $cssClasses = [])
  * @method string menuBar($items, $color = 'trans')
  * @method \Osf\View\Helper\Script script()
  * @method string url($controller = null, $action = null, array $params = null, $transferParamKeys = null)
- * @method \Osf\View\Helper\Bootstrap\Accordion accordion($status = null)
- * @method \Osf\View\Helper\Bootstrap\Alert alert($title = null, $content = null, $status = null, $icon = null)
- * @method \Osf\View\Helper\Bootstrap\Msg bigMsg($content = null, $subContent = null, $status = 'info')
- * @method \Osf\View\Helper\Bootstrap\Box box($title, $content = null, $badge = null, $coloredTitleBox = false, $collapsable = false, $expandable = false, $removable = false)
+ * @method \Osf\View\Helper\Bootstrap\Accordion accordion(string $status = null)
+ * @method \Osf\View\Helper\Bootstrap\Alert alert(string $title = null, string $content = null, string $status = null, string $icon = null)
+ * @method \Osf\View\Helper\Bootstrap\BigMsg bigMsg(string $content = null, string $subContent = null, string $status = 'info')
+ * @method \Osf\View\Helper\Bootstrap\Box box($title, $content = null, $badge = null, bool $coloredTitleBox = false, bool $collapsable = false, bool $expandable = false, bool $removable = false)
  * @method \Osf\View\Helper\Bootstrap\Breadcrumb breadcrumb()
  * @method \Osf\View\Helper\Bootstrap\Button button($label = null, $url = null, $status = null, $icon = null, $block = false, $disabled = false, $flat = false, $size = null)
- * @method \Osf\View\Helper\Bootstrap\ButtonGroup buttonGroup(array $buttons = array(), $vertical = false)
- * @method \Osf\View\Helper\Bootstrap\Callout callout($title = null, $content = null, $status = null)
- * @method \Osf\View\Helper\Bootstrap\Grid grid($namespace = null)
- * @method \Osf\View\Helper\Bootstrap\Box help($helpFileBaseName, $controller = 'info')
- * @method \Osf\View\Helper\Bootstrap\Icon icon($icon = null, $status = null, $iconColor = null, $animated = false)
+ * @method \Osf\View\Helper\Bootstrap\ButtonGroup buttonGroup(array $buttons = [], $vertical = false)
+ * @method \Osf\View\Helper\Bootstrap\Callout callout(string $title = null, string $content = null, string $status = null)
+ * @method \Osf\View\Helper\Bootstrap\Grid grid(string $namespace = null)
+ * @method \Osf\View\Helper\Bootstrap\Box help(string $helpFileBaseName, string $controller = 'info')
+ * @method \Osf\View\Helper\Bootstrap\Icon icon($icon = null, $status = null, $iconColor = null, bool $animated = false)
  * @method \Osf\View\Helper\Bootstrap\InfoBox infoBox($title, $value, $icon = null, $color = null, $percentage = null, $progressDescription = null)
- * @method bool isAjax($ai = null)
- * @method \Osf\View\Helper\Bootstrap\LinkApp linkApp($label, $controller = null, $action = null, array $params = array(), array $attributes = array(), $htmlElement = 'a', array $cssClasses = array())
+ * @method bool isAjax(string $ai = null)
+ * @method \Osf\View\Helper\Bootstrap\LinkApp linkApp(string $label, $controller = null, $action = null, array $params = [], array $attributes = [], string $htmlElement = 'a', array $cssClasses = [])
  * @method \Osf\View\Helper\Bootstrap\ListGroup listGroup()
- * @method \Osf\View\Helper\Bootstrap\Load load($url = null, $icon = null)
- * @method \Osf\View\Helper\Bootstrap\Markdown markdown($separator = null)
+ * @method \Osf\View\Helper\Bootstrap\Load load(string $url = null, string $icon = null)
+ * @method \Osf\View\Helper\Bootstrap\Markdown markdown(string $separator = null)
  * @method \Osf\View\Helper\Bootstrap\Modal modal($id, $title = null, $content = null, $footer = null, $status = null)
- * @method \Osf\View\Helper\Bootstrap\ModalLink modalLink($label, $modalId, array $attributes = array(), $htmlElement = 'a', $escapeLabel = true)
+ * @method \Osf\View\Helper\Bootstrap\ModalLink modalLink(string $label, string $modalId, array $attributes = [], string $htmlElement = 'a', bool $escapeLabel = true)
  * @method \Osf\View\Helper\Bootstrap\Msg msg($content, $status = 'info')
- * @method \Osf\View\Helper\Bootstrap\Nav nav($stacked = false, $justified = false, $activeAutoDected = true)
- * @method \Osf\View\Helper\Bootstrap\Panel panel($title = null, $content = null, $footer = null, $status = null)
+ * @method \Osf\View\Helper\Bootstrap\Nav nav(bool $stacked = false, bool $justified = false, bool $activeAutoDected = true)
+ * @method \Osf\View\Helper\Bootstrap\Panel panel(string $title = null, string $content = null, string $footer = null, string $status = null)
  * @method \Osf\View\Helper\Bootstrap\SmallBox smallBox($titleOrValue, $subTitle, $icon = null, $color = null, $linkLabel = null, $linkUrl = null, $linkIcon = 'fa-arrow-circle-right')
  * @method \Osf\View\Helper\Bootstrap\Table table($data = null)
  * @method \Osf\Form\Helper\Form form(\Osf\Form\AbstractForm $form)
@@ -111,7 +111,7 @@ use \Osf\View\AbstractHelper;
  * @method string formTags(\Osf\Form\Element\ElementInput $element)
  * @method string formTextarea(\Osf\Form\Element\ElementTextarea $element)
  * @method string formWithDecorators(\Osf\Form\AbstractForm $form)
- * @method string label($label = null, $for = null, array $attributes = array())
+ * @method string label($label = null, string $for = null, array $attributes = [])
  */
 abstract class AbstractGeneratedViewHelper extends AbstractHelper
 {

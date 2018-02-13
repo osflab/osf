@@ -15,7 +15,7 @@ use \Osf\View\AbstractStaticHelper;
  *
  * @version 1.0
  * @author Guillaume Ponçon - OpenStates Framework PHP Generator
- * @since OSF 2.0
+ * @since OSF 3.0.0
  * @package osf
  * @subpackage generated
  */
@@ -25,7 +25,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return string
      */
-    public static function baseUrl($uri = '', $withHost = false)
+    public static function baseUrl(string $uri = '', bool $withHost = false)
     {
         return self::callHelper('baseUrl', [$uri, $withHost]);
     }
@@ -49,7 +49,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Html
      */
-    public static function html($content, $elt = null, array $attributes = array(), $escape = true)
+    public static function html($content, string $elt = null, array $attributes = [], bool $escape = true)
     {
         return self::callHelper('html', [$content, $elt, $attributes, $escape]);
     }
@@ -57,7 +57,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\HtmlList
      */
-    public static function htmlList($type = null)
+    public static function htmlList(string $type = null)
     {
         return self::callHelper('htmlList', [$type]);
     }
@@ -65,7 +65,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Link
      */
-    public static function link($label, $controller = null, $action = null, array $params = array(), array $attributes = array(), $htmlElement = 'a', array $cssClasses = array())
+    public static function link(string $label, $controller = null, $action = null, array $params = [], array $attributes = [], string $htmlElement = 'a', array $cssClasses = [])
     {
         return self::callHelper('link', [$label, $controller, $action, $params, $attributes, $htmlElement, $cssClasses]);
     }
@@ -97,7 +97,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Accordion
      */
-    public static function accordion($status = null)
+    public static function accordion(string $status = null)
     {
         return self::callHelper('accordion', [$status]);
     }
@@ -105,15 +105,15 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Alert
      */
-    public static function alert($title = null, $content = null, $status = null, $icon = null)
+    public static function alert(string $title = null, string $content = null, string $status = null, string $icon = null)
     {
         return self::callHelper('alert', [$title, $content, $status, $icon]);
     }
 
     /**
-     * @return \Osf\View\Helper\Bootstrap\Msg
+     * @return \Osf\View\Helper\Bootstrap\BigMsg
      */
-    public static function bigMsg($content = null, $subContent = null, $status = 'info')
+    public static function bigMsg(string $content = null, string $subContent = null, string $status = 'info')
     {
         return self::callHelper('bigMsg', [$content, $subContent, $status]);
     }
@@ -121,7 +121,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Box
      */
-    public static function box($title, $content = null, $badge = null, $coloredTitleBox = false, $collapsable = false, $expandable = false, $removable = false)
+    public static function box($title, $content = null, $badge = null, bool $coloredTitleBox = false, bool $collapsable = false, bool $expandable = false, bool $removable = false)
     {
         return self::callHelper('box', [$title, $content, $badge, $coloredTitleBox, $collapsable, $expandable, $removable]);
     }
@@ -145,7 +145,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\ButtonGroup
      */
-    public static function buttonGroup(array $buttons = array(), $vertical = false)
+    public static function buttonGroup(array $buttons = [], $vertical = false)
     {
         return self::callHelper('buttonGroup', [$buttons, $vertical]);
     }
@@ -153,7 +153,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Callout
      */
-    public static function callout($title = null, $content = null, $status = null)
+    public static function callout(string $title = null, string $content = null, string $status = null)
     {
         return self::callHelper('callout', [$title, $content, $status]);
     }
@@ -161,7 +161,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Grid
      */
-    public static function grid($namespace = null)
+    public static function grid(string $namespace = null)
     {
         return self::callHelper('grid', [$namespace]);
     }
@@ -169,7 +169,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Box
      */
-    public static function help($helpFileBaseName, $controller = 'info')
+    public static function help(string $helpFileBaseName, string $controller = 'info')
     {
         return self::callHelper('help', [$helpFileBaseName, $controller]);
     }
@@ -177,7 +177,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Icon
      */
-    public static function icon($icon = null, $status = null, $iconColor = null, $animated = false)
+    public static function icon($icon = null, $status = null, $iconColor = null, bool $animated = false)
     {
         return self::callHelper('icon', [$icon, $status, $iconColor, $animated]);
     }
@@ -193,7 +193,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return bool
      */
-    public static function isAjax($ai = null)
+    public static function isAjax(string $ai = null)
     {
         return self::callHelper('isAjax', [$ai]);
     }
@@ -201,7 +201,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\LinkApp
      */
-    public static function linkApp($label, $controller = null, $action = null, array $params = array(), array $attributes = array(), $htmlElement = 'a', array $cssClasses = array())
+    public static function linkApp(string $label, $controller = null, $action = null, array $params = [], array $attributes = [], string $htmlElement = 'a', array $cssClasses = [])
     {
         return self::callHelper('linkApp', [$label, $controller, $action, $params, $attributes, $htmlElement, $cssClasses]);
     }
@@ -217,7 +217,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Load
      */
-    public static function load($url = null, $icon = null)
+    public static function load(string $url = null, string $icon = null)
     {
         return self::callHelper('load', [$url, $icon]);
     }
@@ -225,7 +225,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Markdown
      */
-    public static function markdown($separator = null)
+    public static function markdown(string $separator = null)
     {
         return self::callHelper('markdown', [$separator]);
     }
@@ -241,7 +241,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\ModalLink
      */
-    public static function modalLink($label, $modalId, array $attributes = array(), $htmlElement = 'a', $escapeLabel = true)
+    public static function modalLink(string $label, string $modalId, array $attributes = [], string $htmlElement = 'a', bool $escapeLabel = true)
     {
         return self::callHelper('modalLink', [$label, $modalId, $attributes, $htmlElement, $escapeLabel]);
     }
@@ -257,7 +257,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Nav
      */
-    public static function nav($stacked = false, $justified = false, $activeAutoDected = true)
+    public static function nav(bool $stacked = false, bool $justified = false, bool $activeAutoDected = true)
     {
         return self::callHelper('nav', [$stacked, $justified, $activeAutoDected]);
     }
@@ -265,7 +265,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return \Osf\View\Helper\Bootstrap\Panel
      */
-    public static function panel($title = null, $content = null, $footer = null, $status = null)
+    public static function panel(string $title = null, string $content = null, string $footer = null, string $status = null)
     {
         return self::callHelper('panel', [$title, $content, $footer, $status]);
     }
@@ -393,7 +393,7 @@ abstract class StaticGeneratedViewHelper extends AbstractStaticHelper
     /**
      * @return string
      */
-    public static function label($label = null, $for = null, array $attributes = array())
+    public static function label($label = null, string $for = null, array $attributes = [])
     {
         return self::callHelper('label', [$label, $for, $attributes]);
     }
