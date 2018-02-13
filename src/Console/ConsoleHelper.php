@@ -25,7 +25,86 @@ class ConsoleHelper
     const COLOR_BEGIN_YELLOW = '[1;33m';
     const COLOR_BEGIN_BLUE   = '[1;34m';
     const COLOR_END          = '[0;0m';
+    
+    /**
+     * Bootstrap of the controller
+     */
+    public static function run()
+    {
+        if ($_SERVER['argc'] < 2) {
+            self::helpAction();
+            exit();
+        }
+        $method = $_SERVER['argv'][1] . 'Action';
+        if (method_exists(static::getCurrentClass(), $method)) {
+            $params = $_SERVER['argv'];
+            array_shift($params);
+            array_shift($params);
+            call_user_func_array(array(static::getCurrentClass(), $method), $params);
+        } else {
+            self::displayError("command unknown", true);
+        }
+    }
 
+    /**
+     * Display an error.
+     * @param string $errorMessage the error message to display
+     * @param boolean $displayHelp display the help message (helpAction)
+     * @param boolean $exit exit after displaying
+     */
+    protected static function displayError($errorMessage, $displayHelp = false, $exit = true)
+    {
+        echo "\n  " . self::red() . 'Error: ' . self::resetColor() . $errorMessage . "\n";
+        if ($displayHelp) {
+            self::helpAction();
+        } else {
+            echo "\n";
+        }
+        if ($exit) {
+            exit(1);
+        }
+    }
+
+    /**
+     * Display this message
+     */
+    protected static function helpAction()
+    {
+        $class = new \ReflectionClass(static::getCurrentClass());
+        $methods = $class->getMethods();
+        $commands = array();
+        $comments = array();
+        $commandLen = 0;
+        foreach ($methods as $method) {
+            $methodName = (string) $method->getName();
+            if (substr($methodName, -6, 6) == 'Action') {
+                $command = substr($methodName, 0, strlen($methodName) - 6);
+                $comment = preg_replace('#^[^a-zA-Z0-9_.()-]*(.*?)[^a-zA-Z0-9_.()-]*$#', '\1', $method->getDocComment());
+                $commandLen = max(strlen($command), $commandLen);
+                $commands[] = $command;
+                $comments[] = $comment;
+            }
+        }
+        $commandLen++;
+        echo "\n  Synopsis: " . self::green() . basename($_SERVER['argv'][0]) . self::yellow() . ' <command>' . self::resetColor() . " [options]\n\n";
+        foreach ($commands as $key => $command) {
+            printf(self::yellow() . " %' " . $commandLen . 's' . self::resetColor() . ": %s\n", $command, $comments[$key]);
+        }
+        echo "\n";
+    }
+
+    /**
+     * Display a message
+     * @param string $message
+     */
+    protected static function display($message = null)
+    {
+        if ($message != null) {
+            echo '-> ' . $message;
+        }
+        echo "\n";
+    }
+    
     /**
      * New action message, need to be ended by a "endActionXxx" method
      * @param string $message
