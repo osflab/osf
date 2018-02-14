@@ -1,6 +1,6 @@
 # OSF cache component based on Redis
 
-A simple cache component optimised for Redis.
+A simple cache component optimised for Redis which implements PSR6 interface.
 
 ## Installation
 
