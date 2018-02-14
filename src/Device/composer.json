@@ -16,12 +16,12 @@
     },
     "require": {
         "php": "^7.1.0",
-        "mobiledetect/mobiledetectlib": "~2.8.30",
+        "mobiledetect/mobiledetectlib": "2.8.30",
         "osflab/container": "~3.0.0",
         "osflab/session": "~3.0.0",
         "osflab/exception": "~3.0.0"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Osf\\Device\\": ""

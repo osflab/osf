@@ -26,7 +26,7 @@
         "osflab/navigation": "3.0.0",
         "osflab/pdf": "3.0.0"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Osf\\Helper\\": ""

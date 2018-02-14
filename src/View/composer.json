@@ -16,9 +16,9 @@
     },
     "require": {
         "php": "^7.1.0",
-        "zendframework/zend-db": "~2.9.2",
-        "zendframework/zend-paginator": "~2.8.1",
-        "zendframework/zend-view": "~2.10.0",
+        "zendframework/zend-db": "2.9.2",
+        "zendframework/zend-paginator": "2.8.1",
+        "zendframework/zend-view": "2.10.0",
         "osflab/container": "~3.0.0",
         "osflab/exception": "~3.0.0",
         "osflab/stream": "~3.0.0"
@@ -36,7 +36,7 @@
         "osflab/crypt": "~3.0.0",
         "osflab/form": "~3.0.0"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Osf\\View\\": ""
