@@ -43,13 +43,19 @@ abstract class Bootstrap
         $type    = self::DEFAULT_TRANSLATE_TYPE, 
         $pattern = self::DEFAULT_TRANSLATE_PATTERN)
     {
-        $baseDir = APPLICATION_PATH . '/App/' . Router::getDefaultControllerName(true);
         $lang = Container::getLocale()->getLangKey();
         $translator = ZendContainer::getTranslate(false);
         $translator->setLocale($lang);
-        $translator->addTranslationFile('PhpArray', '/zend-i18n-resources/languages/' . $lang . '/Zend_Validate.php');
-        $translator->addTranslationFilePattern($type, $baseDir, $pattern);
-        $translator->setCache(Container::getCache()->getZendStorage());
+        
+        if (defined('APPLICATION_PATH')) {
+            $baseDir = APPLICATION_PATH . '/App/' . Router::getDefaultControllerName(true);
+            $vTranslationFile = realpath(APPLICATION_PATH 
+                    . '/../vendor/zendframework/zend-i18n-resources/languages/' 
+                    . $lang . '/Zend_Validate.php');
+            $translator->addTranslationFile('PhpArray', $vTranslationFile);
+            $translator->addTranslationFilePattern($type, $baseDir, $pattern);
+            $translator->setCache(Container::getCache()->getZendStorage());
+        }
         self::$translatorBuilded = true;
         return $translator;
     }
