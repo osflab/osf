@@ -45,7 +45,7 @@ class Acl extends ZendAcl
     /**
      * @return array
      */
-    protected function getConfig():array
+    protected function getConfig(): array
     {
         if (!$this->config) {
             $this->config = include $this->aclConfigFile;
@@ -79,6 +79,12 @@ class Acl extends ZendAcl
                 $this->allows($roles, $resource);
             }
         }
+        foreach ($config['admin'] as $admin) {
+            if (!$this->hasRole($admin)) {
+                $this->addRole($admin);
+            }
+            $this->allow($admin);
+        }
         
         $this->builded = true;
         return $this;
@@ -92,7 +98,7 @@ class Acl extends ZendAcl
         $this->addRole(new Role(self::ROLE_PUBLIC));
         $this->addRole(new Role(self::ROLE_LOGGED), self::ROLE_PUBLIC);
         $this->addRole(new Role(self::ROLE_NOT_LOGGED), self::ROLE_PUBLIC);
-        $this->addRole(new Role(self::ROLE_ADMIN),  self::ROLE_LOGGED);
+        $this->addRole(new Role(self::ROLE_ADMIN),  [self::ROLE_LOGGED, self::ROLE_NOT_LOGGED, self::ROLE_PUBLIC]);
         return $this;
     }
     
@@ -110,7 +116,7 @@ class Acl extends ZendAcl
                 continue;
             }
             if (!$this->hasRole($role)) {
-                $this->addRole($role);
+                $this->addRole($role, 'LOGGED');
             }
             $this->allow($role, $resources);
         }
@@ -182,7 +188,7 @@ class Acl extends ZendAcl
     public function isAllowed($role = null, $resource = null, $privilege = null)
     {
         $this->buildAcl();
-        return parent::isAllowed($role, $resource, $privilege);
+        return (bool) parent::isAllowed($role, $resource, $privilege);
     }
     
     /**
@@ -203,7 +209,7 @@ class Acl extends ZendAcl
     public function inheritsResource($resource, $inherit, $onlyParent = false)
     {
         $this->buildAcl();
-        return parent::inheritsResource($resource, $inherit, $onlyParent);
+        return (bool) parent::inheritsResource($resource, $inherit, $onlyParent);
     }
     
     /**
@@ -223,7 +229,6 @@ class Acl extends ZendAcl
     public function inheritsRole($role, $inherit, $onlyParents = false)
     {
         $this->buildAcl();
-        
         if (is_string($inherit)) {
             if ($inherit[0] == '!') {
                 return !parent::inheritsRole($role, substr($inherit, 1), $onlyParents);
