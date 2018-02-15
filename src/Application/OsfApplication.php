@@ -264,6 +264,6 @@ class OsfApplication
     
     protected static function debug(string $msg): void
     {
-        self::DEBUG && file_put_contents('/tmp/app-ctrl.log', date('Ymd-His ') . trim($msg) . "\n", FILE_APPEND);
+        self::DEBUG && file_put_contents(sys_get_temp_dir() . '/app-ctrl.log', date('Ymd-His ') . trim($msg) . "\n", FILE_APPEND);
     }
 }
