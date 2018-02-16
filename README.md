@@ -2,7 +2,6 @@
 
 A PHP7 framework optimized for high-speed web-apps, based on ZF2/3, Symfony and several
 proven components. You can use OSF components one by one or this framework as a whole.
-This project will be linked to its components with git subtrees.
 
 ## OSF-based applications
 
