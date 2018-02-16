@@ -82,6 +82,7 @@
         "zendframework/zend-authentication": "2.5.3"
     },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Osf\\": "src"

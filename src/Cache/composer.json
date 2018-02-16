@@ -33,6 +33,7 @@
         "osflab/application": "~3.0.0"
     },
     "minimum-stability": "dev",
+    "prefer-stable": "true",
     "autoload": {
         "psr-4": {
             "Osf\\Cache\\": ""
