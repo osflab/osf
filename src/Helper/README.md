@@ -28,5 +28,5 @@ cd helper && composer update
 Unit tests launch:
 
 ```bash
-php ./vendor/osflab/test/run-tests.php
+vendor/bin/runtests
 ```
