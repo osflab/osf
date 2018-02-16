@@ -42,7 +42,7 @@ class Test extends OsfTest
         self::assert(!$acl->isAllowed('reader@test.com', 'login'));
         self::assert(!$acl->isAllowed('PUBLIC', 'login'));
         self::assert($acl->isAllowed('NOTLOGGED', 'login'));
-        self::assert($acl->isAllowed('ADMIN', 'login'));
+        self::assert(!$acl->isAllowed('ADMIN', 'login'));
         self::assert($acl->isAllowed('ADMIN', 'admin_params'));
         self::assert(!$acl->isAllowed('LOGGED', 'admin_params'));
         self::assert(!$acl->isAllowed('PUBLIC', 'admin_params'));
@@ -90,6 +90,12 @@ class Test extends OsfTest
         self::assertEqual($acl->hasResourceParams('a', 'b'), false);
         self::assertEqual($acl->hasResourceParams('common', 'index'), true);
         self::assertEqual($acl->hasResourceParams('common'), true);
+        
+        self::assert($acl->inheritsRole('otheradmin@test.com', 'LOGGED'));
+        self::assert($acl->inheritsRole('otheradmin@test.com', 'ADMIN'));
+        self::assert(!$acl->inheritsRole('otheradmin@test.com', 'NOTLOGGED'));
+        self::assert($acl->inheritsRole('ADMIN', 'LOGGED'));
+        self::assert(!$acl->inheritsRole('ADMIN', 'NOTLOGGED'));
         
         return self::getResult();
     }

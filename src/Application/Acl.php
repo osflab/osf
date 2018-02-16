@@ -81,7 +81,7 @@ class Acl extends ZendAcl
         }
         foreach ($config['admin'] as $admin) {
             if (!$this->hasRole($admin)) {
-                $this->addRole($admin);
+                $this->addRole($admin, [self::ROLE_ADMIN, self::ROLE_LOGGED, self::ROLE_PUBLIC]);
             }
             $this->allow($admin);
         }
@@ -98,7 +98,7 @@ class Acl extends ZendAcl
         $this->addRole(new Role(self::ROLE_PUBLIC));
         $this->addRole(new Role(self::ROLE_LOGGED), self::ROLE_PUBLIC);
         $this->addRole(new Role(self::ROLE_NOT_LOGGED), self::ROLE_PUBLIC);
-        $this->addRole(new Role(self::ROLE_ADMIN),  [self::ROLE_LOGGED, self::ROLE_NOT_LOGGED, self::ROLE_PUBLIC]);
+        $this->addRole(new Role(self::ROLE_ADMIN), [self::ROLE_LOGGED, self::ROLE_PUBLIC]);
         return $this;
     }
     
