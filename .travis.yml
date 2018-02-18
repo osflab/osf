@@ -1,18 +1,7 @@
 language: php
 
-dist: trusty
-sudo: false
-
 git:
     depth: 1
-
-addons:
-    apt_packages:
-        - composer
-
-env:
-    global:
-        - APPLICATION_ENV=production
 
 matrix:
     include:
@@ -28,17 +17,11 @@ services:
 before_install:
     - |
       stty cols 120
-      PHP=$TRAVIS_PHP_VERSION
-      [ -d ~/.composer ] || mkdir ~/.composer
-      cp .composer/* ~/.composer/
       export COMPOSER_UP='composer update --no-progress --no-suggest --ansi'
       export OSF_TESTS='bin/runtests'
       INI=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
       echo date.timezone = Europe/Paris >> $INI
       echo memory_limit = -1 >> $INI
-      echo session.gc_probability = 0 >> $INI
-      echo opcache.enable_cli = 1 >> $INI
-      echo apc.enable_cli = 1 >> $INI
       echo extension = redis.so >> $INI
 
 install:
