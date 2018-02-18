@@ -23,6 +23,7 @@ before_install:
       echo date.timezone = Europe/Paris >> $INI
       echo memory_limit = -1 >> $INI
       echo extension = redis.so >> $INI
+      echo extension = imagick.so >> $INI
 
 install:
     - |
