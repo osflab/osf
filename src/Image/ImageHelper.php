@@ -230,11 +230,12 @@ class ImageHelper
     /**
      * Check uploaded images
      * @param array $image
+     * @param bool $checkUploaded only used for unit tests
      * @return array
      * @throws DisplayedException
      * @todo refactoring
      */
-    public static function checkImageFromPostFile(array $image): array
+    public static function checkImageFromPostFile(array $image, bool $checkUploaded = true): array
     {
         $output = ['img' => null, 'error' => null, 'warning' => null];
         if ($image['error'] !== UPLOAD_ERR_OK) {
@@ -249,9 +250,9 @@ class ImageHelper
                 default :
                     $output['error'] = __("Une erreur a été détectée lors de l'envoi de votre fichier. Veuillez réessayer.");
             }
-            Log::error('Uploaded file error', 'IMG', $image);
-        } else if (!is_uploaded_file($image['tmp_name'])) {
-            Log::hack('Not an uploaded file: ' . $image['tmp_name'], $image);
+            self::log('Uploaded file error', $image);
+        } else if ($checkUploaded && !is_uploaded_file($image['tmp_name'])) {
+            self::log('Not an uploaded file: ' . $image['tmp_name'], $image, true);
             $output['error'] = __("Ce fichier ne peut être traité. Veuillez nous excuser pour la gêne occasionnée.");
         } else if (!preg_match('/^image\/.*$/', $image['type'])) {
             $output['error'] = __("Ce fichier ne semble pas être une image valide. Veuillez sélectionner un fichier contenant une image.");
@@ -291,13 +292,30 @@ class ImageHelper
                 }
                 $output['img'] = $imagick;
             } catch (DisplayedException $e) {
-                Log::error('Image (displayed): ' . $e->getMessage(), 'IMG', $e);
+                self::log('Image (displayed): ' . $e->getMessage(), $e);
                 $output['error'] = $e->getMessage();
             } catch (\Exception $e) {
-                Log::error('Traitement image: ' . $e->getMessage(), 'IMG', $e);
+                self::log('Traitement image: ' . $e->getMessage(), $e);
                 $output['error'] = __("Une erreur est survenue pendant le traitement de votre image. Veuillez vous assurer qu'elle est lisible et non corrompue.");
             }
         }
         return $output;
+    }
+    
+    /**
+     * Internal log
+     * @param string $msg
+     * @param type $details
+     * @return void
+     */
+    protected static function log(string $msg, $details = null, bool $hack = false): void
+    {
+        if (class_exists('Log')) {
+            if ($hack) {
+                Log::hack($msg, $details);
+            } else {
+                Log::error($msg, 'IMG', $details);
+            }
+        }
     }
 }

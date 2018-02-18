@@ -20,6 +20,9 @@
         "osflab/exception": "~3.0.0",
         "osflab/container": "~3.0.0"
     },
+    "require-dev": {
+        "osflab/test": "~3.0.0"
+    },
     "suggest": {
         "osflab/application": "~3.0.0",
         "osflab/log": "~3.0.0"
