@@ -259,6 +259,7 @@ class OsfCache implements CacheInterface
         if (!isset($storages[$namespace])) {
             $rrm = new RedisResourceManager();
             $rrm->setResource('default', $this->getRedis());
+            $rrm->setLibOption('default', Redis::OPT_SERIALIZER, $this->redis->getOption(Redis::OPT_SERIALIZER));
             $options = new RedisOptions();
             $options->setResourceManager($rrm);
             $storages[$namespace] = new RedisAdapter($options);

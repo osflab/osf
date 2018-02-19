@@ -116,7 +116,7 @@ class PhpErrorException extends \Exception
             if (\Osf\Application\OsfApplication::isDevelopment()) {
                 \Osf\Exception\Error::displayException($e);
             } else {
-                if (\Osf\Application::isStaging()) {
+                if (\Osf\Application\OsfApplication::isStaging()) {
                     $err = sprintf(__("%s. Details in log file."), $e->getMessage());
                     echo \Osf\Container\OsfContainer::getViewHelper()->alert(__("Error detected"), $err)->statusWarning();
                 }
