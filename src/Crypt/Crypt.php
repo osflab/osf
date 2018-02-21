@@ -21,10 +21,9 @@ namespace Osf\Crypt;
 class Crypt
 {
     const DEFAULT_KEY = 'OPENSTATES-UNSECURE-KEY';
-    const MODE_BINARY = 'binary';
-    const MODE_ASCII = 'ascii';
     const DEFAULT_HASH_ALGO = 'crc32b';
     const SECURE_HASH_ALGO = 'sha256';
+    const CIPHER_METHOD = 'AES-256-ECB';
 
     private $key = null;
     private $mode = null;
@@ -33,48 +32,42 @@ class Crypt
      * @param string $cryptKey
      * @param string $mode
      */
-    public function __construct($cryptKey = self::DEFAULT_KEY, $mode = self::MODE_ASCII)
+    public function __construct($cryptKey = self::DEFAULT_KEY)
     {
         $this->key = $cryptKey;
-        $this->mode = $mode;
     }
 
     /**
      * Encrypt a string
      * @param string $str
      * @return string
-     * @todo remove dependency to deprecated mcrypt extension
      */
     public function encrypt(string $str): string
     {
-        $encBin = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $this->key, $str, MCRYPT_MODE_ECB, $this->getIv());
-        return $this->mode === self::MODE_ASCII ? $this->bin2hex($encBin) : $encBin;
+        return openssl_encrypt($str, self::CIPHER_METHOD, $this->key, 0, $this->getIv());
     }
 
     /**
      * Decrypt a string
      * @param string $str
      * @return string
-     * @todo remove dependency to deprecated mcrypt extension
      */
     public function decrypt(string $str): string
     {
-        $crypted = $this->mode === self::MODE_ASCII ? $this->hex2bin($str) : $str;
-        return mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $this->key, $crypted, MCRYPT_MODE_ECB, $this->getIv());
+        return openssl_decrypt($str, self::CIPHER_METHOD, $this->key, 0, $this->getIv());
     }
 
     /**
      * @staticvar ?string $iv
      * @return string
-     * @todo remove dependency to deprecated mcrypt extension
      */
     protected function getIv(): string
     {
         static $iv = null;
 
         if ($iv === null) {
-            $ivSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
-            $iv = mcrypt_create_iv($ivSize, MCRYPT_RAND);
+            $ivSize = openssl_cipher_iv_length(self::CIPHER_METHOD);
+            $iv = openssl_random_pseudo_bytes($ivSize);
         }
         return $iv;
     }

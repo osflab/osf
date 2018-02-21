@@ -16,7 +16,7 @@
     },
     "require": {
         "php": "^7.1.0",
-        "ext-mcrypt": "*",
+        "ext-openssl": "*",
         "osflab/exception": "~3.0.0"
     },
     "require-dev": {
