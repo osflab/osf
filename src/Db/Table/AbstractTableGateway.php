@@ -261,9 +261,9 @@ class AbstractTableGateway extends ZendAbstractTableGateway implements TableGate
      * @param array $where
      * @return int
      */
-    public function update($set, $where = null)
+    public function update($set, $where = null, array $joins = null)
     {
         $this->initialize();
-        return parent::update($set, $where);
+        return parent::update($set, $where, $joins);
     }
 }
