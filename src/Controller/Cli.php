@@ -235,7 +235,7 @@ namespace Osf\Controller {
         protected static function checkOnlyDevEnv(): void
         {
             $env = defined('APPLICATION_ENV') ? APPLICATION_ENV : (getenv('APPLICATION_ENV') ?? null);
-            if ($env !== Application::ENV_DEV) {
+            if ($env !== Application::ENV_DEV && !defined('OSF_INSTALL')) {
                 self::displayError('Use this command only in development environment');
             }
         }
