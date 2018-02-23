@@ -39,6 +39,14 @@ class Test extends OsfTest
         self::assert(preg_match('/^[a-f0-9]{8}$/', $cryptObj->getRandomHash()));
         self::assert(preg_match('/^[a-f0-9]{64}$/', $cryptObj->getRandomHash(true)));
         
+        $passes = ['mypassword42', 'M%µµ°40490°°?./§/.  ??./.'];
+        foreach ($passes as $pass) {
+            $hash = $cryptObj->passwordHash($pass);
+            self::assertEqual(strlen($hash), 60);
+            self::assert($cryptObj->passwordVerify($pass, $hash));
+            self::assert(!$cryptObj->passwordVerify($pass . '1', $hash));
+        }
+        
         return self::getResult();
     }
 }
