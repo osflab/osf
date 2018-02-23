@@ -165,6 +165,17 @@ abstract class Action
      */
     public function dispatch(array $params = [])
     {
+        static $dispatchHistory = [];
+        static $dispatchHistoryCount = 0;
+        
+        $dispatchHistory[] = $params;
+        $dispatchHistoryCount++;
+        if ($dispatchHistoryCount > 10) {
+            Container::getApplication()->isDevelopment() && var_dump($dispatchHistory);
+            trigger_error('Infinite  dispatch loop detected', E_USER_ERROR);
+            die();
+        }
+        
         Container::getRequest()->reset()->setParams($params);
         Container::getResponse()->reset();
         Container::getApplication()
