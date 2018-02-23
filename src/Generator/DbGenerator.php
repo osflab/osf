@@ -35,7 +35,7 @@ class DbGenerator extends AbstractGenerator
      * @var \Zend\Db\Adapter\Adapter
      */
     protected $dbAdapter = null;
-    protected $params = array();
+    protected $params = [];
     protected $tablesComments = [];
 
     /**
@@ -53,7 +53,7 @@ class DbGenerator extends AbstractGenerator
         }
         $this->dbAdapter = $adapter;
         if ($params === null) {
-            $params = array();
+            $params = [];
         }
         if (!isset($params['application_path'])) {
             $params['application_path'] = APP_PATH;
@@ -87,8 +87,8 @@ class DbGenerator extends AbstractGenerator
         foreach ($comments->toArray() as $values) {
             $this->tablesComments[$values['TABLE_NAME']][$values['COLUMN_NAME']] = $values['COLUMN_COMMENT'];
         }
-        $internalConstraints = array();
-        $externalConstraints = array();
+        $internalConstraints = [];
+        $externalConstraints = [];
         foreach ($metadata->getTableNames() as $table) {
             foreach ($metadata->getConstraints($table) as $constraint) {
                 if ($constraint->getType() == 'FOREIGN KEY' && count($constraint->getColumns()) == 1) {
@@ -115,7 +115,7 @@ class DbGenerator extends AbstractGenerator
         }
         foreach ($containerClasses as $tableName) {
             $classPath = "\\Sma\\Db\\" . $tableName . 'Table';
-            $class->addMethod('get' . $tableName . 'Table', array(), 
+            $class->addMethod('get' . $tableName . 'Table', [], 
                 PropertyGenerator::FLAG_PUBLIC | PropertyGenerator::FLAG_STATIC, 
                 "return self::buildTableObject('" . $classPath . "');",
                 '@return ' . $classPath);
@@ -124,7 +124,7 @@ class DbGenerator extends AbstractGenerator
             $p1->setName('rowData')->setDefaultValue(null)->setType('array');
             $p2 = new ParameterGenerator();
             $p2->setName('rowExistsInDatabase')->setDefaultValue(false);
-            $class->addMethod('build' . $tableName . 'Row', array($p1, $p2), 
+            $class->addMethod('build' . $tableName . 'Row', [$p1, $p2], 
                 PropertyGenerator::FLAG_PUBLIC | PropertyGenerator::FLAG_STATIC, 
                 "return self::buildRowObject('" . $classPath . "', \$rowData, \$rowExistsInDatabase);",
                 '@return ' . $classPath);
@@ -248,11 +248,11 @@ class DbGenerator extends AbstractGenerator
                 }
                 $values[$column->getName()] = $column->getColumnDefault();
                 $classRow->addMethod('get' . T::camelCase($column->getName()), 
-                                     array(),
+                                     [],
                                      MethodGenerator::FLAG_PUBLIC | MethodGenerator::FLAG_FINAL,
                                      'return $this->get(\'' . $column->getName() . '\');');
                 $classRow->addMethod('set' . T::camelCase($column->getName()),
-                                     array('value'),
+                                     ['value'],
                                      MethodGenerator::FLAG_PUBLIC | MethodGenerator::FLAG_FINAL,
                                      'return $this->set(\'' . $column->getName() . '\', $value);',
                                      "@return \\Sma\\Db\\" . $ucTable . 'Row');
@@ -278,13 +278,13 @@ class DbGenerator extends AbstractGenerator
                     $valueGetter = '$this->get' . T::camelCase($constraint->getColumns()[0]) . '()';
                     $methodBody = 'return $this->getInternalFkRow(' . $valueGetter . ', ' . $tableGateway . ', \'' . $constraint->getReferencedColumns()[0] . '\');';
                     $docBlock = "@return \\Sma\\Db\\" . T::camelCase($constraint->getReferencedTableName()) . 'Row';
-                    $classRow->addMethod($methodName, array(), MethodGenerator::FLAG_PUBLIC, $methodBody, $docBlock);
+                    $classRow->addMethod($methodName, [], MethodGenerator::FLAG_PUBLIC, $methodBody, $docBlock);
                 }
             }
             $findMethod = new MethodGenerator();
             $docBlock   = new DocBlockGenerator();
             $returnType = $dbNamespacePrefix . $ucTable . 'Row';
-            $docBlock->setTag(array('name' => 'return', 'description' => $returnType));
+            $docBlock->setTag(['name' => 'return', 'description' => $returnType]);
             $findMethod->setDocBlock($docBlock);
             $findMethod->setName('find');
             $findMethod->setParameter('id');
@@ -309,8 +309,6 @@ class DbGenerator extends AbstractGenerator
             $file = $modelsPath . '/' . $ucTable . 'Row.php';
             if (!file_exists($file)) {
                 $class = $this->buildClass($ucTable . 'Row', $generatedRowClass, 'Row model for table ' . $tableName, "Use this class to complete " . $generatedRowClass);
-                $class->addMethod('set', array('field', 'value'), MethodGenerator::FLAG_PUBLIC, 'return parent::set($field, $value);', 'Put filters, validators and data cleaners here');
-                $class->addMethod('get', array('field'), MethodGenerator::FLAG_PUBLIC, 'return parent::get($field);', 'Put filters here');
                 $phpPrefix = "namespace Sma\\Db;\n\n";
                 $phpPrefix .= "use Sma\\Db\\Generated\\Abstract" . $ucTable . "Row;\n\n";
                 $this->filePutClassContent($file, $phpBegin . $phpPrefix . $class->generate(), 0666);
