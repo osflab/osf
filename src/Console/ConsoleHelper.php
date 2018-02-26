@@ -86,7 +86,7 @@ class ConsoleHelper
             }
         }
         $commandLen++;
-        echo "\n  Synopsis: " . self::green() . basename($_SERVER['argv'][0]) . self::yellow() . ' <command>' . self::resetColor() . " [options]\n\n";
+        echo "\n  Usage: " . self::green() . basename($_SERVER['argv'][0]) . self::yellow() . ' <command>' . self::resetColor() . " [options]\n\n";
         foreach ($commands as $key => $command) {
             printf(self::yellow() . " %' " . $commandLen . 's' . self::resetColor() . ": %s\n", $command, $comments[$key]);
         }

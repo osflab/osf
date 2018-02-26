@@ -30,7 +30,7 @@
         "psr/simple-cache": "1.0.0",
         "soundasleep/html2text": "0.5.0",
         "symfony/yaml": "3.4.4",
-        "tecnickcom/tcpdf": "6.2.13",
+        "tecnickcom/tcpdf": "6.2.16",
         "twig/twig": "2.4.4",
         "zendframework/zend-cache": "2.7.2",
         "zendframework/zend-db": "2.9.2",
