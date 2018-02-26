@@ -27,7 +27,7 @@
         "osflab/pdf": "3.0.0"
     },
     "minimum-stability": "dev",
-    "prefer-stable": "true",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Osf\\Helper\\": ""

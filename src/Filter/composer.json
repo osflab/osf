@@ -30,7 +30,7 @@
         "osflab/generator": "For the Filter quick access helper"
     },
     "minimum-stability": "dev",
-    "prefer-stable": "true",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Osf\\Filter\\": ""
