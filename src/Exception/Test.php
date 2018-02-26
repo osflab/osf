@@ -9,7 +9,11 @@
 namespace Osf\Exception;
 
 use Osf\Exception\PhpErrorException;
+use Osf\Exception\PhpError\DeprecatedException;
+use Osf\Exception\PhpError\WarningException;
+use Osf\Exception\PhpError\UserWarningException;
 use Osf\Test\Runner as OsfTest;
+use Osf\Log\LogProxy;
 
 /**
  * Exception test suite
@@ -48,6 +52,13 @@ class Test extends OsfTest
             self::assertEqual($e->getTitle(), 'Title');
             self::assertEqual($e->getStatus(), 'warning');
             self::assertEqual($e->getMessage(), 'Message');
+        }
+        
+        if (class_exists('\Osf\Log\LogProxy')) {
+            self::assertEqual((new PhpErrorException())->getLogLevel(), LogProxy::LEVEL_ERROR);
+            self::assertEqual((new DeprecatedException())->getLogLevel(), LogProxy::LEVEL_WARNING);
+            self::assertEqual((new WarningException())->getLogLevel(), LogProxy::LEVEL_ERROR);
+            self::assertEqual((new UserWarningException())->getLogLevel(), LogProxy::LEVEL_WARNING);
         }
 
         return self::getResult();
