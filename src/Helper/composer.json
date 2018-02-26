@@ -1,7 +1,7 @@
 {
     "name": "osflab/helper",
     "description": "OSF helper library",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/helper",
     "license": "AGPL-3.0-or-later",
@@ -17,15 +17,15 @@
     },
     "require": {
         "php": "^7.1.0",
-        "osflab/stream": "~3.0.0",
-        "osflab/exception": "~3.0.0"
+        "osflab/stream": "~3.0.1",
+        "osflab/exception": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "provide": {
-        "osflab/navigation": "3.0.0",
-        "osflab/pdf": "3.0.0"
+        "osflab/navigation": "3.0.1",
+        "osflab/pdf": "3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

@@ -1,7 +1,7 @@
 {
     "name": "osflab/osf",
     "description": "OpenStates Framework",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/osf",
     "license": "AGPL-3.0-or-later",

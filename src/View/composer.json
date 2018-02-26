@@ -1,7 +1,7 @@
 {
     "name": "osflab/view",
     "description": "OSF view component",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/view",
     "license": "AGPL-3.0-or-later",
@@ -20,22 +20,22 @@
         "zendframework/zend-db": "2.9.2",
         "zendframework/zend-paginator": "2.8.1",
         "zendframework/zend-view": "2.10.0",
-        "osflab/container": "~3.0.0",
-        "osflab/exception": "~3.0.0",
-        "osflab/stream": "~3.0.0"
+        "osflab/container": "~3.0.1",
+        "osflab/exception": "~3.0.1",
+        "osflab/stream": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "provide": {
-        "osflab/form": "3.0.0",
-        "osflab/navigation": "3.0.0"
+        "osflab/form": "3.0.1",
+        "osflab/navigation": "3.0.1"
     },
     "suggest": {
-        "osflab/controller": "~3.0.0",
-        "osflab/db": "~3.0.0",
-        "osflab/crypt": "~3.0.0",
-        "osflab/form": "~3.0.0"
+        "osflab/controller": "~3.0.1",
+        "osflab/db": "~3.0.1",
+        "osflab/crypt": "~3.0.1",
+        "osflab/form": "~3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

@@ -1,7 +1,7 @@
 {
     "name": "osflab/generator",
     "description": "OSF high-level code generator",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/generator",
     "license": "AGPL-3.0-or-later",
@@ -17,15 +17,15 @@
     },
     "require": {
         "php": "^7.1.0",
-        "osflab/exception": "~3.0.0",
-        "osflab/stream": "~3.0.0"
+        "osflab/exception": "~3.0.1",
+        "osflab/stream": "~3.0.1"
     },
     "require-dev": {
         "zendframework/zend-code": "3.3.0"
     },
     "provide": {
-        "osflab/controller": "3.0.0",
-        "osflab/validator": "3.0.0"
+        "osflab/controller": "3.0.1",
+        "osflab/validator": "3.0.1"
     },
     "suggest": {
         "zendframework/zend-db": "2.9.2",

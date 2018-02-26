@@ -1,7 +1,7 @@
 {
     "name": "osflab/doc-maker",
     "description": "OSF document generator",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/doc-maker",
     "license": "AGPL-3.0-or-later",
@@ -18,15 +18,15 @@
     "require": {
         "php": "^7.1.0",
         "erusev/parsedown": "1.6.4",
-        "osflab/stream": "~3.0.0",
-        "osflab/exception": "~3.0.0",
-        "osflab/container": "~3.0.0"
+        "osflab/stream": "~3.0.1",
+        "osflab/exception": "~3.0.1",
+        "osflab/container": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "suggest": {
-        "osflab/view": "~3.0.0"
+        "osflab/view": "~3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

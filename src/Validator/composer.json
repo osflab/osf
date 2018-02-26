@@ -1,7 +1,7 @@
 {
     "name": "osflab/validator",
     "description": "OSF validators based on ZF2/3",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/validator",
     "license": "AGPL-3.0-or-later",
@@ -18,15 +18,15 @@
     "require": {
         "php": "^7.1.0",
         "zendframework/zend-validator": "2.10.2",
-        "osflab/exception": "~3.0.0",
-        "osflab/stream": "~3.0.0",
-        "osflab/generator": "~3.0.0"
+        "osflab/exception": "~3.0.1",
+        "osflab/stream": "~3.0.1",
+        "osflab/generator": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "provide": {
-        "osflab/form": "3.0.0"
+        "osflab/form": "3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

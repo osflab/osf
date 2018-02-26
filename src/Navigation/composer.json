@@ -1,7 +1,7 @@
 {
     "name": "osflab/navigation",
     "description": "OSF navigation component",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/navigation",
     "license": "AGPL-3.0-or-later",
@@ -18,16 +18,16 @@
     "require": {
         "php": "^7.1.0",
         "mobiledetect/mobiledetectlib": "2.8.30",
-        "osflab/application": "~3.0.0",
-        "osflab/view": "~3.0.0",
-        "osflab/container": "~3.0.0",
-        "osflab/stream": "~3.0.0",
-        "osflab/controller": "~3.0.0",
-        "osflab/exception": "~3.0.0",
-        "osflab/helper": "~3.0.0"
+        "osflab/application": "~3.0.1",
+        "osflab/view": "~3.0.1",
+        "osflab/container": "~3.0.1",
+        "osflab/stream": "~3.0.1",
+        "osflab/controller": "~3.0.1",
+        "osflab/exception": "~3.0.1",
+        "osflab/helper": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

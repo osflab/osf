@@ -1,7 +1,7 @@
 {
     "name": "osflab/office",
     "description": "OSF office document proxies",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/office",
     "license": "AGPL-3.0-or-later",
@@ -21,9 +21,9 @@
         "phpoffice/phpspreadsheet": "1.1.0",
         "cache/redis-adapter": "1.0",
         "cache/simple-cache-bridge": "1.0",
-        "osflab/exception": "~3.0.0",
-        "osflab/container": "~3.0.0",
-        "osflab/cache": "~3.0.0"
+        "osflab/exception": "~3.0.1",
+        "osflab/container": "~3.0.1",
+        "osflab/cache": "~3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

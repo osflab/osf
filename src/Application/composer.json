@@ -1,7 +1,7 @@
 {
     "name": "osflab/application",
     "description": "OSF high speed MVC component",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/application",
     "license": "AGPL-3.0-or-later",
@@ -18,16 +18,16 @@
     "require": {
         "php": "^7.1.0",
         "zendframework/zend-permissions-acl": "2.6.0",
-        "osflab/exception": "~3.0.0",
-        "osflab/container": "~3.0.0",
-        "osflab/controller": "~3.0.0"
+        "osflab/exception": "~3.0.1",
+        "osflab/container": "~3.0.1",
+        "osflab/controller": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "provide": {
-        "osflab/controller": "3.0.0",
-        "osflab/navigation": "3.0.0"
+        "osflab/controller": "3.0.1",
+        "osflab/navigation": "3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

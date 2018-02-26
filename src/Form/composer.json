@@ -1,7 +1,7 @@
 {
     "name": "osflab/form",
     "description": "OSF form generator",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/form",
     "license": "AGPL-3.0-or-later",
@@ -19,12 +19,12 @@
         "php": "^7.1.0",
         "zendframework/zend-filter": "2.7.2",
         "zendframework/zend-validator": "2.10.2",
-        "osflab/filter": "~3.0.0",
-        "osflab/validator": "~3.0.0",
-        "osflab/stream": "~3.0.0",
-        "osflab/container": "~3.0.0",
-        "osflab/exception": "~3.0.0",
-        "osflab/view": "~3.0.0"
+        "osflab/filter": "~3.0.1",
+        "osflab/validator": "~3.0.1",
+        "osflab/stream": "~3.0.1",
+        "osflab/container": "~3.0.1",
+        "osflab/exception": "~3.0.1",
+        "osflab/view": "~3.0.1"
     },
     "suggest": {
         "osflab/db": "For TableForm",

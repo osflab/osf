@@ -1,7 +1,7 @@
 {
     "name": "osflab/filter",
     "description": "OSF filters based on ZF2/3",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/filter",
     "license": "AGPL-3.0-or-later",
@@ -18,14 +18,14 @@
     "require": {
         "php": "^7.1.0",
         "zendframework/zend-filter": "2.7.2",
-        "osflab/exception": "~3.0.0",
-        "osflab/stream": "~3.0.0"
+        "osflab/exception": "~3.0.1",
+        "osflab/stream": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "provide": {
-        "osflab/form": "3.0.0"
+        "osflab/form": "3.0.1"
     },
     "suggest": {
         "osflab/generator": "For the Filter quick access helper"

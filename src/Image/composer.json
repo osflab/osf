@@ -1,7 +1,7 @@
 {
     "name": "osflab/image",
     "description": "OSF image manipulator",
-    "version": "3.0.0",
+    "version": "3.0.1-dev",
     "type": "library",
     "homepage": "https://github.com/osflab/image",
     "license": "AGPL-3.0-or-later",
@@ -18,15 +18,15 @@
     "require": {
         "php": "^7.1.0",
         "ext-imagick": "*",
-        "osflab/exception": "~3.0.0",
-        "osflab/container": "~3.0.0"
+        "osflab/exception": "~3.0.1",
+        "osflab/container": "~3.0.1"
     },
     "require-dev": {
-        "osflab/test": "~3.0.0"
+        "osflab/test": "~3.0.1"
     },
     "suggest": {
-        "osflab/application": "~3.0.0",
-        "osflab/log": "~3.0.0"
+        "osflab/application": "~3.0.1",
+        "osflab/log": "~3.0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
