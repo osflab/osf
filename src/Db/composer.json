@@ -1,6 +1,7 @@
 {
     "name": "osflab/db",
     "description": "OSF db manager",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/db",
     "license": "AGPL-3.0-or-later",

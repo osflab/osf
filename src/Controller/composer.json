@@ -1,6 +1,7 @@
 {
     "name": "osflab/controller",
     "description": "OSF controller component",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/controller",
     "license": "AGPL-3.0-or-later",

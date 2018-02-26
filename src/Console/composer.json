@@ -1,6 +1,7 @@
 {
     "name": "osflab/console",
     "description": "OSF simple unit test component",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/console",
     "license": "AGPL-3.0-or-later",

@@ -1,6 +1,7 @@
 {
     "name": "osflab/form",
     "description": "OSF form generator",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/form",
     "license": "AGPL-3.0-or-later",

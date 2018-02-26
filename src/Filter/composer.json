@@ -1,6 +1,7 @@
 {
     "name": "osflab/filter",
     "description": "OSF filters based on ZF2/3",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/filter",
     "license": "AGPL-3.0-or-later",

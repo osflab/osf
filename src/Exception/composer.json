@@ -1,6 +1,7 @@
 {
     "name": "osflab/exception",
     "description": "OSF standardized exceptions",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/exception",
     "license": "AGPL-3.0-or-later",

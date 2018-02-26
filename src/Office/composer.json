@@ -1,6 +1,7 @@
 {
     "name": "osflab/office",
     "description": "OSF office document proxies",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/office",
     "license": "AGPL-3.0-or-later",

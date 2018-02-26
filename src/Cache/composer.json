@@ -1,6 +1,7 @@
 {
     "name": "osflab/cache",
     "description": "OSF cache proxy optimized for performance",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/cache",
     "license": "AGPL-3.0-or-later",

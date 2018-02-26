@@ -1,6 +1,7 @@
 {
     "name": "osflab/navigation",
     "description": "OSF navigation component",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/navigation",
     "license": "AGPL-3.0-or-later",

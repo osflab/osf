@@ -1,6 +1,7 @@
 {
     "name": "osflab/log",
     "description": "OSF logger component",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/log",
     "license": "AGPL-3.0-or-later",

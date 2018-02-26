@@ -1,6 +1,7 @@
 {
     "name": "osflab/device",
     "description": "OSF simple device detection and manipulations",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/device",
     "license": "AGPL-3.0-or-later",

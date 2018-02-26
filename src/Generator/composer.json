@@ -1,6 +1,7 @@
 {
     "name": "osflab/generator",
     "description": "OSF high-level code generator",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/generator",
     "license": "AGPL-3.0-or-later",

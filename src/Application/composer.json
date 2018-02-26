@@ -1,6 +1,7 @@
 {
     "name": "osflab/application",
     "description": "OSF high speed MVC component",
+    "version": "3.0.0",
     "type": "library",
     "homepage": "https://github.com/osflab/application",
     "license": "AGPL-3.0-or-later",
