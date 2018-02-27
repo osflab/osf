@@ -15,6 +15,7 @@ use Zend\Code\Generator\MethodGenerator;
 use Zend\Db\Metadata\Object\TableObject;
 use Zend\Db\Metadata\Metadata;
 use Zend\Db\Adapter\Adapter;
+use Osf\Container\AbstractContainer;
 use Osf\Exception\ArchException;
 use Osf\Stream\Text as T;
 use Osf\Container\ZendContainer;
@@ -111,7 +112,7 @@ class DbGenerator extends AbstractGenerator
             $class = $this->buildClass('AbstractDbContainer', 'AbstractDbContainerProxy', 'Table & View models container (NOT WRITABLE)');
             $class->setAbstract(true);
             $class->addProperty('instances', [], PropertyGenerator::FLAG_PROTECTED | PropertyGenerator::FLAG_STATIC);
-            $class->addProperty('mockNamespace', 'real', PropertyGenerator::FLAG_PROTECTED | PropertyGenerator::FLAG_STATIC);
+            $class->addProperty('mockNamespace', AbstractContainer::MOCK_DISABLED, PropertyGenerator::FLAG_PROTECTED | PropertyGenerator::FLAG_STATIC);
         }
         foreach ($containerClasses as $tableName) {
             $classPath = "\\Sma\\Db\\" . $tableName . 'Table';
