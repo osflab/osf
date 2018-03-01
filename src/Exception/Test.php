@@ -14,6 +14,7 @@ use Osf\Exception\PhpError\WarningException;
 use Osf\Exception\PhpError\UserWarningException;
 use Osf\Test\Runner as OsfTest;
 use Osf\Log\LogProxy;
+use Exception;
 
 /**
  * Exception test suite
@@ -31,7 +32,7 @@ class Test extends OsfTest
     {
         self::reset();
         
-        self::assertEqual(PhpErrorException::startHandler(false, false), null);
+        self::assertEqual(PhpErrorException::startHandler(false, false, E_ALL), null);
         self::assertEqual(trigger_error('test', E_USER_WARNING), true);
         self::assertEqual(get_class(PhpErrorException::getLastError()), 'Osf\Exception\PhpError\UserWarningException');
         self::assertEqual(trigger_error('test', E_USER_NOTICE), true);
@@ -43,7 +44,7 @@ class Test extends OsfTest
             throw new HttpException('Unknown', 999);
         } catch (ArchException $e) {
             self::assert(strpos($e->getMessage(), 'HttpException launched without known http code. Choose one of theses: ') === 0);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             self::assert(false, 'Not expected: ' . $e->getMessage());
         }
 
@@ -61,6 +62,12 @@ class Test extends OsfTest
             self::assertEqual((new UserWarningException())->getLogLevel(), LogProxy::LEVEL_WARNING);
         }
 
+        PhpErrorException::startHandler(false, false, E_USER_WARNING);
+        //self::assertEqual(trigger_error('This error is not handled', E_USER_NOTICE), true);
+        //self::assert(get_class(PhpErrorException::getLastError()) !== 'Osf\Exception\PhpError\UserNoticeException');
+        self::assertEqual(trigger_error('This error must be handled', E_USER_WARNING), true);
+        self::assertEqual(get_class(PhpErrorException::getLastError()), 'Osf\Exception\PhpError\UserWarningException');
+        
         return self::getResult();
     }
 }

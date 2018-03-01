@@ -50,8 +50,13 @@ class PhpErrorException extends \Exception
     protected static $logErrors;
     protected static $triggerApplication;
     
-    public static function startHandler(bool $logErrors = true, bool $triggerApplication = true)
+    public static function startHandler(
+            bool $logErrors = true, 
+            bool $triggerApplication = true, 
+            ?int $handledErrors = null)
     {
+        $handledErrors = $handledErrors ?? E_ERROR | E_USER_ERROR | E_USER_WARNING;
+        
         self::$logErrors = $logErrors;
         self::$triggerApplication = $triggerApplication;
         return set_error_handler(function ($severity, $msg, $file, $line, array $context)
@@ -83,7 +88,7 @@ class PhpErrorException extends \Exception
             self::$lastError = $e;
             self::$logErrors && self::logError($e);
             self::$triggerApplication && self::triggerApplication($e);
-        });
+        }, $handledErrors);
     }
     
     /**
