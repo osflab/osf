@@ -8,8 +8,9 @@
 
 namespace Osf\Form;
 
-use Osf\Form\AbstractForm;
 use Osf\Container\OsfContainer as C;
+use Osf\Log\LogProxy as Log;
+use Osf\Form\AbstractForm;
 
 /**
  * Form class
