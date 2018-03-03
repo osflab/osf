@@ -284,7 +284,7 @@ class OsfCache implements CacheInterface
      */
     protected function checkKey($key): void
     {
-        if (!is_string($key) || !preg_match('/^[a-zA-Z0-9:+_-]{1,40}$/', $key)) {
+        if (!is_string($key) || !preg_match('/^[a-zA-Z0-9:+_-]{1,1000}$/', $key)) {
             throw new InvalidArgumentException('Invalid cache key [' . $key . ']');
         }
     }
