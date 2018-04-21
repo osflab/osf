@@ -16,17 +16,17 @@
         "source": "https://github.com/osflab/validator"
     },
     "require": {
-        "php": "^7.1.0",
-        "zendframework/zend-validator": "2.10.2",
-        "osflab/exception": "~3.0.1",
-        "osflab/stream": "~3.0.1",
-        "osflab/generator": "~3.0.1"
+        "php": "^7.1.3",
+        "zendframework/zend-validator": "~2.10.2",
+        "osflab/exception": "~3.0.2",
+        "osflab/stream": "~3.0.2",
+        "osflab/generator": "~3.0.2"
     },
     "require-dev": {
-        "osflab/test": "~3.0.1"
+        "osflab/test": "~3.0.2"
     },
     "provide": {
-        "osflab/form": "3.0.1"
+        "osflab/form": "3.0.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

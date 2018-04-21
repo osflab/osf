@@ -8,7 +8,7 @@
 
 namespace Osf\Generator;
 
-use \Osf\Exception\ArchException;
+use Osf\Exception\ArchException;
 
 /**
  * Autocall for auto generated class instanciation (without constructor params)
